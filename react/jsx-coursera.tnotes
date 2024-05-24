@@ -1,0 +1,14 @@
+- When using a return statement, a div element is not needed. A simple <> </> can also be used as well. This is what's called a fragment
+
+- class is not allowed in react as it is a keyword in JavaScript. However, className may be used and is
+
+- <Example>
+    Hello there
+</Example>
+
+- The Hello there text is a child of the Example JSX element. The Example JSX element above is an "invocation" of the Example.js file, which, in modern React, is usally a function component 
+
+- This Hello there text can be passed as a named prop when rendering the Example componnent 
+
+- JSX component can be styled similar to HTML using both a link reference or an inline style wrapping the properties inside curly brackets  within another curly bracket. Remember that both numbers and text requires to be wrapped on quotes. Example below:
+

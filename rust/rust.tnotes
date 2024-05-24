@@ -1,0 +1,29 @@
+- print!() is used to print to console
+- let keyword is used to declare a variable
+- scope is defined by the block of code in which its declared {}
+- function uses the fn keyword
+- shadowing allows variables to be re declared in the same scope with the same name
+= to fix an undeclared variable, we can append a _ before the variable. eg. let _y: i32
+- variables in Rust is default to immutable. To change , we add the mut keyword before a variable
+- we can initialize a variable without a value or out of scope if placed inside a {} bracket 
+- when using a {}, we can use the variables after the sentence as arguments. Example:
+        println!("The value fo x is {} and value of y is {}", x, y); // x, y as arguments
+- however this does not apply when a variable is inside a local scope . Using example above, it is only accessible within the local scope so we cannot access the y variable outside the scope.
+- string annotation keyword is &str
+- int annotation is i32
+- every starting file is inside the main function
+- invoking or calling a function = functionName();
+- println! without the ! is calling the function. While a ! calls a Rust macro.
+-  In Rust, packages of code are referred to as crates
+- cargo check is much faster than cargo build because it skips the step of producing an executable.
+- Using cargo check will speed up the process when creating a project. Its common to use cargo check periodically then run cargo build when ready to run the executable
+
+//Cargo 
+- cargo new : creates a new project
+- cargo build: builds a new project with "crates"
+- cargo run: build and run a project in one step
+- cargo check: check without needing to produce a binary exe
+- Cargo stores results inside target/debug dir instead of the same dir as the code
+- When ready for release, use cargo build --release to compile with optimizations. This will create an exe in target/release rather than target/debug. 
+
+- Using rustc is useful for smaller projects however as they become larger , cargo will be easier to build and coordinate the build. You can also build any previous projects into a cargo build by using cargo build on a existing local project or through git clone.

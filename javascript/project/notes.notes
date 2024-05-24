@@ -1,0 +1,91 @@
+notes.notes- max width to set the max width for larger screens. Not comfortable if someone is viewing on a large monitor where the elements
+expand the entire width of the screens
+- a trick to expand the entire background is setting the background color/image on a new div wrapper or container.
+- it's preferred to use REM instead of PX to scale better when others are viewing a page
+- to convert REM to PX, you would divide the PX amount by 16 to get the value of REM
+- padding is whats considered inside of a border around the content
+- margin is the space AROUND the border.
+- so the order is the content, padding, border, margin
+- block level element means that it will expand to take up the full width of a container by default. Meaning it will take up it's entire horizonal line and create its own line . By default, you can only have one block element per line
+- inline-block is similar to inline  but does not take up it's own vertical space. meaning it still acts as an inline content
+- rgba transparency has a value between 0 and 1, with 1 being 100% visible
+- with svg , you can drag the file in an IDE to get the properties
+- rather than using "'" in html, the safe way to using apostrophes is with the keyword &rsquo;
+- font weight of 700 is set to default. While 600 is considered semi-bold
+- display absoulate is positioned relative to its relative position HOWEVER if there is no relative reference, it will reference the default top display of the page
+- using negative value on a abosoulte property will start the position beyond the original position
+- to hide any properties that protudes the edge of a page , we can use overflow: hidden
+- z-index is scored by higher number away from 0. Higher the number, the more priorty it has over other CSS properties. Position would also have to be set to relative display
+- Changing position relative will not change display but will affect z-index 
+- overflow hidden to hide any overlapping edges
+- adding display block to an image can prevent unwanted spaces around an image inside a grid container	
+- git check out -- . /// (this reverts back any unwanted changes)
+- git add . or git add -A to add all untracked changes
+- sometimes css is not cahced. to fix this you can hold down the shift buttonn while selecting refresh
+- git fetch will check any remotes for any updates, basically it just checks chanes if merging a commit or not
+- git pull origin main/master will check if any change of commits has been made. 
+- when an error message gets displayed warning that the remote repository does not exist, git pull would be required
+- however, also git config might also be needed when dealing with thse conflicts
+- :wq w means to write or save changes . q means to quit the text editor promot
+- git checkout -b //to createa  new branch within repository
+- git checkout to switch between branches
+- another method for using media query is using 
+grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+- content first approach rather than a screen size first approach. This method is useful for grid columns however media query is still preferred.
+
+//setting up a keygen code. creates 2 files into centralized location
+- ssh-keygen -t ed25519 -C "email@email.com"
+- cd ~/.ssh // changes directory to home folder > hidden ssh folder
+- ssh ls // list all contents inside ssh folder
+- id_edxxxxx.pub will be used to compare token with github
+- .ssh cat id_edxxxxx.pub
+- .ssh //copy entire content to github from [ssh TO .com]
+- Github > Settings > SSH > New SSH Key > Title (optional) > Key
+- greeen dot on vscode shows untracked changes. 
+- querySelector("") // can be assigned a class , id or element with its corresponding symbol
+- textConent method // to dispay content on screen
+- addEventListener method //mainly used for onClick . This takes in 2 parameters. First param is the event that is to be triggered. Second is the action that is to occur. Example:
+function () {
+  if(document.querySelector("berry-field").value > 9) {
+    document.querySelector("message").textContent = "Contgrats!"
+  } else {
+   document.querySelector("message").textContent = "Sorry!!"
+  }
+}
+
+- querySelector("") // can be assigned a class , id or element with its corresponding symbol
+- textConent method // to dispay content on screen
+- addEventListener method //mainly used for onClick . This takes in 2 parameters. First param is the event that is to be triggered. Second is the action that is to occur. Example:
+function () {
+  if(document.querySelector("berry-field").value > 9) {
+    document.querySelector("message").textContent = "Contgrats!"
+  } else {
+   document.querySelector("message").textContent = "Sorry!!"
+  }
+}
+
+- git merge --no-ff [branch name] //--no-ff keeps history. without it, it would look as if the changes were made on the main branch
+- web browser method.
+- await only usable in an asynchronous function
+- async returns a promise
+- await not yet finished but "promised" to finish later
+- returns weather promise to json file.
+- javascript object notation. objects with listed properties to parsing plain text into javascript objects accessible by its syntax
+- await for both fetch and new constant variable
+- pull requests initate a merge to one branch within the main/master branch
+- querySelector("") // can be assigned a class , id or element with its corresponding symbol
+- textConent method // to dispay content on screen
+
+- addEventListener method //mainly used for onClick . This takes in 2 parameters. First param is the event that is to be triggered. Second is the action that is to occur. Example:
+function () {
+  if(document.querySelector("berry-field").value > 9) {
+    document.querySelector("message").textContent = "Contgrats!"
+  } else {
+   document.querySelector("message").textContent = "Sorry!!"
+  }
+}
+
+ - application/json can access a body of object in a json file. format is body: JSON.stringify ()
+- CRUD create, read, update, delete
+- client side js is executed on the users browser. eg if statements are 
+happening on their computer. This can be an issue as it cannot be fully trusted as its being run on a unsafe environment . 

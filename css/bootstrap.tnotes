@@ -1,0 +1,89 @@
+Bootstrap 
+
+Pros:
+Easy, fast to use, free plans
+Consistent styling, browser compatability
+Great for a fast and simple website
+
+
+Cons:
+Classbloat
+Multiple elements bloated in HTML due to classes/id
+Not as customizable as vanilla CSS
+Not suitable for large projects with customizations
+
+- Bootstrap is installed via CDN by inserting a link tag similar to CSS (CDN = content delivery network) 
+
+- If applying any functionality like drop down menus, insert before body section similar to JS
+
+12 Column System:
+1.0 Class Container
+	2.0 Class Row
+		2.1 Class Col
+
+- Bootstrap automatically fits the width of the items in a row by the content width
+- Applying a container class using Bootstrap will make the elements responsive depending on the user screen. You can also manually apply the screen properties with sm,md,,lg,xl,xxl, fluid
+
+- Fluid means to reach all screen sizes from edge to edge or 100% width in most cases. container and container fluid is most frequently use
+
+- Sized Columns: Similar to applying a span property equal to 12 rows. For instance, if we have 3 items and specify a col-2, col-4, and col-6, the size would increase per each item (left to right). Setting a col-4,col-4,col-4 will make all the columns equal in size since all 3 columns equal 12
+
+- The breakpoint when applying an infix on container is the difference between current infix to the infix above (greater than) For instance, a container-sm is when the width of the page is GREATER than 576px, not less than.
+
+- Bootstrap is useful for not needing multiple media queries since it can be replaced by using infix property instead 
+
+- You can combine infix with the sized columns eg. col-sm-2, col-sm-4, col-sm-6.  When a number infix is not defined it will automatically distribute
+
+- If the overall width is less than 576px, all the items will automatically shrink to 100% of its content. Essentially it will be as if all the items now have the property 'col'
+
+Multiple Breakpoints
+- You can also add multile breakpoints to a single div. Meaning it will reach depending on the screen size and how much it reduces and grows.
+
+Automatic Sized Column: If a column does not have a specified sized column, it will automatically adjust in sideto take up whatever proportion remains. Example of col-2 and col-4 is set with a 3rd col but no sized column, it will automatically be as if the 3rd col is now col-6. 
+
+<!-- Modify the HTML code for the purple boxes below so it behaves like the green ones. -->
+  <div class="row">
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
+  </div>
+  
+  In the example above, we can actually eliminate the need to put col-sm-12 as the breakpoints target sizes ABOVE the breakpioint. Since we are stating that the desktop size be set to 50%, it will automatically be displayed back to 100% when it reaches BELOW the breakpoint 
+
+  <!-- Modify the HTML below to make the blue boxes behave like the red ones. -->
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 col-10">Column 1</div>
+    <div class="col-lg-3 col-sm-6 col-10"> Column 2</div>
+    <div class="col-lg-3 col-sm-6 col-10">Column 3</div>
+  </div>
+      
+ - For the infix sm, we applied a 12 infix to the first item so that we can create a new row as the 12 width is fully taken up
+
+ - There are certain cases where using bootstrap is faster and more efficient than using flexbox or grid.
+
+ Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+
+The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, and xxl.
+
+Where property is one of:
+
+m - for classes that set margin
+p - for classes that set padding
+Where sides is one of:
+
+t - for classes that set margin-top or padding-top
+b - for classes that set margin-bottom or padding-bottom
+s - (start) for classes that set margin-left or padding-left
+e - (end) for classes that set margin-right or padding-right
+x - for classes that set both *-left and *-right
+y - for classes that set both *-top and *-bottom
+blank - for classes that set a margin or padding on all 4 sides of the element
+Where size is one of:
+
+0 - for classes that eliminate the margin or padding by setting it to 0
+1 - (by default) for classes that set the margin or padding to $spacer * .25
+2 - (by default) for classes that set the margin or padding to $spacer * .5
+3 - (by default) for classes that set the margin or padding to $spacer
+4 - (by default) for classes that set the margin or padding to $spacer * 1.5
+5 - (by default) for classes that set the margin or padding to $spacer * 3
+auto - for classes that set the margin to auto
+(You can add more sizes by adding entries to the $spacers Sass map variable.)

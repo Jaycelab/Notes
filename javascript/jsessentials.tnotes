@@ -1,0 +1,8 @@
+a conjunction, i.e. logical AND (&& symbol)
+an alternative, i.e. logical OR (symbol ||)
+a negation, i.e. logical NOT (symbol !)
+
+The negation operator is an unary, and it changes the logical value of the operand to its opposite, that is, false to true, and true to false. 
+
+The highest priority is negation !, then conjunction &&, and finally the alternative ||. The precedence can of course be changed by means of parentheses.
+

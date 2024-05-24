@@ -1,0 +1,67 @@
+- NPM is a  package mangement that is used to install, uninstall and update Javascript packages 
+- NPX is a package executer that is used o directly execute Javascript packges without installing them
+
+
+function App() {
+  const age = 19;
+  const isGreen = false;
+
+  return (
+  <div className = "App">
+    {age >= 18 ? <h1> Overage</h1> : <h1>Underage</h1>} //Ternary 
+  </div>
+  );
+}
+
+function App() {
+  const planets = [
+    { name: "Mars", isGasPlanet: false },
+    { name: "Earth", isGasPlanet: false },
+    { name: "Jupiter", isGasPlanet: true },
+    { name: "Venus", isGasPlanet: false },
+    { name: "Neptune", isGasPlanet: true },
+    { name: "Uranus", isGasPlanet: true },
+  ];
+
+  return (
+    <div className="App">
+      {planets.map(
+      //(planet,key) => planet.isGasPlanet && <h1> {planet.name} </h1>
+        (planet, key) => !planet.isGasPlanet && <h1> {planet.name} </h1>
+      )}
+    </div>
+  );
+}
+
+//Alternative
+return (
+	<div className="App">
+	{planets.map((planet,keys) => {
+	if (planet.isGasPlanet) return <h1> {planet.name}</h1>;
+	})} 
+	</div>
+);
+
+
+Styling CSS inline in React requires an object . The object{} is wrapped inside another set of {}. Example: 
+ style={{color: "red"}}. (Note, since this is JSX, the color "red" is wrapped in quotes )
+ 
+ - you can assign variables before the return statement and create objects as well. When calling an object, you pass the object name as the parameter on the function and call inside the variable block as an argument. Example
+function App () {
+	const user = {
+	firstName: "Jason",
+	lastName: "Alvarado"
+	}
+	
+	const fullName = (user) => {
+	} return `${firstName} ${lastName}`
+};
+
+	return (
+	<>
+		<h1>{fullName(user)}!<h1/>
+	</>
+	)
+}
+
+-- if statements can only be used outside the return statement, however using teneary satements is possible 

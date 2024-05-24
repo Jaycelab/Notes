@@ -1,0 +1,97 @@
+Dom Manipulation:
+- querySelector(), querySelectorAll(), getElementById(), and
+  getElementsByClassName() are JavaScript DOM selector
+- getElementById returns the first element with id attribute
+
+# Example below # (quickest but not the most efficient)
+[js]
+const target - document.querySelector('body')
+
+function handleClick() {
+		console.log('clicked the body');
+	}
+// passing two parameters, event type 'click' + function
+target.addEventListener('click', handleClick)
+
+function handleClick2() { 
+console.log('Clock the heading') 
+}
+
+
+//capturing user input 
+let answer = prompt('What is your name'):
+
+//once user provided input to variable (answer)
+if (typeof(answer) === 'string') {
+//assigns information to <h1> element
+	let h1 = document.createElement('h1') 
+		h1.innerTest = answer;
+		document.body.innerText = ""; 
+		document.bodyappendCHild(h1);
+}
+
+//take an input from an HTML form and display the text that a user //types in on the screen.
+let h1 = document.createElement('h1')
+h1.innerText = "Type into the input to make this text change"
+
+let input = document.createElement('input')
+input.setAttribute('type', 'text')
+document.body.innerText = ''; 
+document.body.appendChild(h1); 
+document.body.appendChild(input);	
+
+//EVENT LISTENER
+
+//Similar to above example, however dynamically adding "input" //element and setting HTML 'type' attribute to 'test'.  Example //below will be listening for a 'change' event (even listener) Will //activate after input has been filled and pressed ENTER.
+
+let h1 = document.createElement('hi')
+h1.innerText = 'Type into the input to make this text change'
+
+let input = document.createElement('input')
+input.setAttribute('type', 'text')
+
+document.body.innerTest = '';
+document.body.appendChild(h1);
+document.body.appendChild(input);
+
+//code below will show the value of the typed in text in the console //once user is typing into the 'input' field.
+input.addEventListener('change', function(){
+	//console.log(input.value)
+
+
+//below will update the text contents of the h1 element with the //value entered from the input field (cancelled console.log from //above code)
+h1.innerText = input.value
+});
+
+//Exercise: Capture Data
+let h1 = document.querySelector('h1')
+
+let arr =[
+'Example Domain',
+'First Click',
+'Second Click',
+'Third Click'
+]
+
+function handleClicks() {
+	switch (h1.innerText) {
+	  case arr[0]:
+	  	h1.innerText = arr[1];
+	  	break;
+
+	  case arr[1]:
+	  	h1.innerText = arr[2];
+	  	break;
+
+	  case arr[2]:
+	  	h1.innerText = arr[3];
+	  	break;
+
+	  default:
+	  h1.innerText = arr[0];
+	}
+}
+
+h1.addEventListener('click', handleClicks);
+
+[\js]

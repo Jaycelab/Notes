@@ -1,0 +1,103 @@
+CSS Selectors:
+selector > selector: You can seleect a child selector directly below above (1 generation deep) from a parent selector. This will only work if its a direct child
+**Rather than selecting "div" use class name > element (or class) instead
+
+- descendant = apply to a descendent of left side. This can be a non-direct child of a parent as long as a class is present on the left side of the property. For example, you can select a class 1 > class 2 > p
+
+- selectorselector . Selecting with no spaces. Example: To target <h1 id='title' class='big-heading'>Hello</h1>. h1#little.big.heading. # will be used for ID and . for class. If any spaces are present, it is filled with a . instead.
+
+- combining combiners - selector selectorselector is a combination of the above examples
+
+- For types of positioning.Static, Relative, Absolute & Fixed.
+
+<!-- For hands on example:
+https://appbrewery.github.io/css-positioning/ -->
+
+- Static: This is the default flow when applying html. We can set position to static however it is not need as it is the default position. Any new elements are placed underneath the property
+
+- Relative: This is the most commonly used position. The position is relative to it's default position. For example a default static position has a default position and when a relative position is applied, the position values are applied relative to the static position. In simpler terms, relative position takes the static position and applies positioning
+
+- Absolute: Position relative to neart positioned ancestor or top left corner of webpage. Basically, if an element has a set relative position, and we apply an absolute position, the absolute position becomes relative to that container instead (whichever is closest) However, if are no nearby elements than it defaults to the top left corner of the web page. Any new position thats applied with a RELATIVE property on a near container will also take into effect.
+
+- Z-index (or zed index): This determines which elements are displayed on the screen. All elements are shown equally with a default property of 0. The higher the number, the more importance it has and will be displayed in a higher importance as opposed to a negative value, which will instead push it behind. The z index is what's calculated between the x and y axis.
+
+- Fixed: Position relative to top left corner of browser window. Regardless, if you scroll up or down, the position will remain in a fixed location relative to its position property value. We can also add extra properties (margin, padding) that will also be applied to its fixed position value
+
+REMEMBER TO USE TOP, LEFT, RIGHT ETC INSTEAD OF MARGIN!!
+
+- Span : Span is commonly used in between 2 elements and has a default display of inline. There are a total of 3 display properties and most properties have a default display of block.
+
+
+- Float: Can be applied to both left and right sides targeting images, paragraphs, headings, etc. Clear is commonly used on the footer to wrap around the containers with values commonly set to both or left/right. 
+
+- Responsive Webstie: There are 4 primary methods of applying responsiveness to a website. They are: 
+
+* Media Queries
+* CSS Grid 
+* CSS Flexbox 
+* External Framworks eg Tailwind, Bootstrap , SASS
+
+- A display of block will take up an entire full width. For example, a container with a block display will not take up the same space but will instead create a new line
+
+- Inline will create an element on the same line and will fill the full width once all elements are occupied. Inline elements cannot set a width or a height because it defaults to the size of the actual content. Ex, an element with "Hello" will only take up the width and height of 5 letters,
+
+- Inline-block: Block sets height and width. Inline can have elements that can go on the same line. Essentially, it gives the power of both allowing to change the height and width. Example, if the width is too large, it will occupy a new line however if it's too small, it can also occupy the same line from a previous element.
+
+- Float: Wraps around another element. For example, we can wrap an image around a paragraph by setting a float:left (or right)
+
+- Media Query: Instead of a selector, a @media is used with a breakpoint within paranthesis () then followed my general styling. Examples of a break point can be a mix-width, max-width, min-height, max height etc. The CSS styling is wrapped around a seperate set of curly braces. Setting a max-width: 600px will apply the given values once the width of the page reaches below the 600px breakpoint. However, a min-width with a 600px will apply the opposite since the values are applied once it reaches over 600px. In context, a max-width is in the direction of LEFT and the mix-width is in the direction of RIGHT. Example below:
+
+  @media (max-width: 600px) {
+  div {
+  height: 100px;
+  width: 100px;
+  }
+  }
+
+- You can also combine breakpoints by using and in between. For example (min-width: 600px) and (max-width: 900px) Essentially this means that the given value will be applied once the page reaches over 600px and below 900px.
+
+- You can also reverse this concept by first applying the max width property , using AND to separate and then follow with a min-width. This means that the styles will be applied for screens less than 600px and greater than 900px (bascailly a certain range within the page width will only become standard styling )
+
+@media screen may also be used but not neccesarily as the default screen orientation is set to landscape. Another value commonly used is Print which will apply display changes once the page is set to print
+(\*\*\*Check MDN for more features and selectors)
+
+
+Position Property
+The CSS position property sets how an element is positioned in a document. We can use it to determine how we want to position individual elements based on the values you give the position property.
+
+The position property takes five values.
+
+Static - default
+
+Relative
+
+Absolute
+
+Fixed
+
+Sticky
+
+Relative
+Relative position means that an element is positioned relative to its original position in the normal flow. By setting an element to just have position: relative nothing will happen. We will need to use the placement properties to change how the element is positioned relative to its original position.
+
+Basically when you set a HTML element to position: relative, it will remain in the flow of the layout. But, by using the placement properties you can move the element around. Let’s look at an example to cement your understanding of the relative position.
+
+Absolute
+Absolute positioned elements are removed from the normal document flow, and the space that the element was originally occupying is no longer reserved for that element. I like to remember it by saying it is 'absolutely not there'.
+
+When the element is given position: absolute all other elements behave as if that element is no longer in the document. Therefore, there is no space reserved for that element in the page layout.
+
+An important point and something that stumped me when I was learning is that an element with position: absolute is positioned relative to its closest positional ancestor. What this means is that for absolute positioning to work, the parent element must have a position property value other than the default of static.
+
+Sticky
+This is a relatively new positioning property. The sticky positioning value is positioned according to the normal flow of the document, yet it is also a mix of both position relative and position fixed. What I mean by this is that it behaves as a relatively positioned element until the page reaches a set scroll point then it will behave as a fixed position element.
+
+This is how you get those cool navbar effects when it scrolls to a certain point and changes color.
+
+Fixed
+Fixed positioning works like absolute positioning in that it is removed from the normal document flow, and the space that element was originally occupying is no longer reserved for that element.
+
+The big thing with Fixed is that fixed positioned elements are positioned relative to the viewport. What this means is that when you scroll down the page, the element remains in its original location on the page. This is often used for navigation bars, which no matter where the users scrolls on the page always remain visible at the top of the page.
+
+Closing thoughts
+Personally my biggest take away and the one that cause the most nightmares was not knowing parent elements needed a position property value to work with absolute!!! if you take nothing else away from this please take that point.

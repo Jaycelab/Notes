@@ -1,0 +1,7 @@
+- to always have access to an array, you can use .length-1
+- adding to an array is possible using length as it returns amoount of indexes
+- length can also be used to mutate an array. Example, changing .length = 2 // or 0
+- ADDING arrays: PUSH to insert at the end of index. UNSHIFT to insert at the beginning
+- DELETING arrays: POP is used to delete the last index. SHIFT is used to delete the first element
+- slice(start,end) gets a part of the array. The END index does not get included
+- you can assign a variable to a integer that can be passed along inside an array index to set the index 

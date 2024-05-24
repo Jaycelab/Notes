@@ -1,0 +1,6 @@
+- Like CSS, you can manually select child elements by using element child( eg document.firstElementChild.lastElementChild )
+- .innerHTML returns the original element and modifies after = operator
+.querySelector looks inside the ENTIRE document for a 'selector' (or id,class)
+- objects inside the DOM can have both properties and methods.
+- Properties describe something about the object.
+- Methods are things that the object can do

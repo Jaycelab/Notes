@@ -1,0 +1,116 @@
+
+
+
+-  Protocol > Domain Name > File Path (sometimes empty if linking to homepage)
+- *img tags are self closing* (empty or void elements) and inline element
+- <a> - anchor similar to boat anchor. <a href="www.google.com> 
+- <br> does not need a closing tag (self-closing tag). It has no contents. These elements are referred to as void or empty element. <img> is also considered an empty element
+- <div> stands for <division>. This element is used to divide up the pages into different sections. It also has an invisible box around it, similar to the <p> element. One main difference is that a <p> element is specifically meant to contain texts. In contract, the <div> element is a generic container for any other elements to be put inside to organize contents and divide the pages in sections
+- <h1> is used for the main heading on a page, while the rest are used for subheadings. There are a total of 6 heading levels. Smaller headings are used to show that one section is inside another
+- <p> tag is another example of an element in which a closing tag is optional. However leaving off a closing <p> tag is still implied --meaning the browser will figure out where the element should be closed 
+- <sub> and <sup> stand for "subscript" and "superscript". Originally, HTML started out as a tool for scientific and academic work; and these are really useful for science and math, like writing x2+3x+4 = 1 or chemical formulas like H2O.
+- .. means to go up one level path. . means to stay within the current directory. 
+- alt = text description of the image
+- browsers gets web pages by communicating with servers 
+- Difference between <br> and <p> is br just tells the browser to end the line. P tells the browsers to create an invisible box (block) around the surrounding text that has a height, width and margin. P is considered a block element. BR is considered an inline element
+- element is a group of tags, however it may also be confused as a single tag 
+- Few examples of inline include <br>, <em>, <strong>, <mark>, <a>, <img>, <span>
+- Few more examples of block elements include <ol>, <h1>, <video>, <div> <table>. 
+- html stands for HyperText Markup Language
+- HTTP(s) = considered a full qualified or absolute URL. This is still considered a full URL = file:///Users/Kelly/notes.html 
+- https://validator.w3.org will check and validate for any HTML errors. Will show either a warning or error message 
+- hypertext - a form of text in which documents can refer(link) to their documents and resources
+- markup is text that has a special meaning. Every element starts and ends with a <tag>. The first tag is called an opening tag and the ending tag with a slash (/) is called a closing a tag. The brackets are usually referred is as an "angle bracket"
+- markup is text that the browser should look for or how it's arranged. Within a markup, there can be references to include other documents and files like images and videos. 
+- nesting elements can go inside other elements, but have certain rules. Example: small elements can go inside top level elements. Two p elements cannot be used, two script elements with different tags cannot be used
+- relative URLs are files that are located in the same folder path. Example: a photo would just need the filename+extension. A full URL is needed if hosting on a server. This is also why you cannot use an anchor tag without a HTTP because it is being treated as a relative URL (on googles server)
+- requests are sent by name (ex: index.html) to the web server and sends backs a response containing that document. If not name is found, sends back an error message (ex 404: Page Not Found)
+- servers are computers that have programs running which answers a browsers requests 
+- spaces, tabs, and lines breaks are called <strong>whitespace</strong>
+- src = URL of the image 
+- text files contain letters, numbers, spaces, punctuation. They do not contain color, images or videos. Similar to anything you can write on an old typewrite. HTML is written strictly in text. The layout of a webpage, as seen by the user, is put together by the web browser based on the code in the text file.
+- the rules of these steps are called HTTP (Hyper Text Transfer Protocol). HTTP(s) use encryption to keep data secure (s)
+- web is a collection of documents made up of html, videos, images
+- white spaces written in an IDE will not be displayed on the web browser 
+- white space includes spaces, tabs, and line breaks.  When the browser displays an HTML file, it treats a run of white space as a single space character. In order to create a line break that will show up in the browser, use the <br> tag.
+= URL: Uniform Resource Locator. Uniform = (standardized) Resource (file or other data object) Locator (address for finding something)
+Attribute Name = "Attribute". Value <> Link Text 
+Example: 
+Formalism: Computers take code literally and will only do exactly what you tell it to do
+Href = hypertext reference
+HTML and Web:
+Nesting: Bits of code going inside other bits of code in an orderly way. 
+Syntax: Grammar rules of a computer language (similar to any other spoken language, ex. English)
+
+-HEADINGS-
+- H1 for Intro
+- H2 for Body Title 
+- H3 for Sub body
+- P for additional body (paragraphs)
+
+
+- OGP
+
+Open Graph Protocol - A set of metadata rules that allows web pages to describe themselves to social media networks. Developers use OGP to improve the use experience of shared linked as the social media platforms uses these shared links to create a preview of the shared web page 
+
+The meta tag is also placed in between the head element however a difference is that it uses a PROPERTY attribute instead of a name attribute. It's property often begins with "og:sometext" as OG is used to reference Open Graph related tag
+
+The Open Graph Protocol must always include the following 4 property types:
+title - title of page
+type- type of content (website, music, article or video) 
+url - permanent web address 
+image - image that must be used when shared
+
+In combination of the above types, social media platforms are able to create a sharable website link along with the following below
+
+Description - the description of the web page
+Locale- Language and location . (example en_US)
+Site_name - overall website that it belongs to
+
+OG:Type may often include the Site_Name to better help provide potential customers the name of the business
+
+Social media cards using OGP requires a type, image and title. It does not require description as it is only optional
+
+- Viewport can impact Search Engine rankings
+
+- Multiple headers are possible. However, we cannot nest headers, or add a header in a footer.
+
+- To define a page refresh for a website, the attribute values of http-equiv and content must be included 
+
+<Form valadition>
+
+- Form validation ensures that data is valid and conforms to defined rules
+There are 2 types of validation : 
+*Client and Service side*
+
+- Client-side validation checks for errors as soon as they are typed into the form, often done by the web browser or Javascript code. The feedback response is immediate. Client-side checks to see if the form has been filled out correctly and submitted to the server for processing if no errors are found. If invalid (errors found) an error message will alert the user of the invalid data. example: not entering a valid email or entering a letter on a number type input
+
+- Server side validation checks for errors after it has been submitted to the web server. This is more secure as it prevents user from tampering with the websites code and submitting invalid requests to your server. When the data is submitted, the back end will validate the data before processing it. This process goes through a more complex validation as it can validate the data against databases or business requirements, etc 
+
+- Most websites use both client and server side validations to provide immediate feedback to users and added security
+
+- A few examples of inputs include: <input type="">
+email
+tel
+url
+data
+time
+number
+range
+color
+
+- Common to use individual div elements per each input label/value
+
+- FORM method POST is common for HTTPS
+
+- Add "required" along with additional properties inside input elements to require min-length, input etc.
+
+*Radiobutton*
+- Fieldset elements is used to group radio buttons. Without it, all radio buttons will belong to the same group.
+- Button elements goes below the field set
+- Inputs elements goes between the field set. Each input represents a button (choice)
+- The input name should also match the field id. This tells the browser which input the field set belongs to
+- Use "checked" attribute to set a default location
+- To be able to select an option without having to select the radio, you can wrap the inputs in it's own label.
+- Use datalist input to add a form which users can pick from a long list
+- Calander can use input "date", "week" and "month"

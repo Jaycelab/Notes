@@ -1,0 +1,94 @@
+- Applying display flex does not apply to the following rules: inline, block, inline-block & none. Flex has it's own set of rules and properties that is solely for flex properties
+
+Different elements have their own display depending on the type of element. For example: 
+	Div - Block
+	Span - Inline
+	P - etc
+
+However, if applying the entire elements above in a flex container, all the default display will be overridden by the flex display type. 
+
+- The width of the flex container will depend on the containers of the container regardless of the type of element (p, img, h1, etc) It will try to make all the elements fit within its width
+
+- Applying gap can be used by px for static but can also be applied by % or more responsive, 1rem (adapt based on the top level size of the content)
+
+- The defaul of a flex is a full width of it's container . However, you can also apply an inline-flex, in which the container will take up as much width of the current elements but will fill as other elements are added 
+
+- Flex-direction is default to row filling up the entire width of a container. 
+
+Main axis is left to right if set to row. And Cross is vertical (perpendicular to the main axis) Setting a flex-direction to column with reverse the axis and set the main axis to vertical and cross axis to horizontal
+
+- Flex-basis: This can be similar to setting a width or height depending on the direction . Ex, setting a flex-basis of 100px while set to row, will create a "width" of 100px and fill elements along the main axis (horizontal) 
+However, setting a flex-basis of 100px while set to column, will create a "height" of 100px filling the main axis (vertical). 
+
+Essential they are 'flexing' along the main axis depending on the direction of row or column
+If setting a flex basis, remember that it is commonly placed on the elments inside the container and not the actual container itself. Therefor, we should use a unversial selector followed by the class of the container (example container * ) The properties on the container itself would be the gap , display , positioning etc
+
+- We can either set the display to a flex with a set width OR we can also set to inline-flex so that the elements automatically fill in the container 
+
+- The importantance of flex-box width sizing:
+Contect width < width < flex-basis < min-width/max-width
+
+- By default, the max width looks at the longest possible line of text and the min-width looks at longest word  inside the container
+
+- If a container includes 4 items with a set width of 100px , the total container width would be 400px and when the screen is reduced, it will try to shrink each of the items using the same algorithm. The width will be respected until it reaches below the set width. Items inside a container without a set width will respect the content width instead (which is the items inside the container)
+
+- Flex-basis: Setting a flex-basis will ignore the width property and will reduce the screen size width up to the threshold of the flex-basis value, in which the same rules above will be applied. If setting a flex-basis, there is no need to set a width as it will be completely ignored.
+
+- Max-width is all of the content lined up , occupying the ideal state, which in the form of text is to have everything on one line. It determines how much the max width that the item inside a container is able to grow
+
+- Min-width is determined by the longest word and will be the width of that word at the font size set
+
+- If applying both a flex-basis and max/mix-width, in which the flex-basis is higher, it will override the flex-basis value and instead respect the max/min width properties instead.
+
+- However if a flex-basis has a low value than the min-max width, it will instead change all of the items to the flex-basis value but will still fill up the max width set on the container
+
+- If a flex-basis has a lower value than the min-width, the flex-basis will be respecting the min-width instead. However, the items will only reduce ONLY if the min-width value has been met. So if a min-width is set at a large value, then it will not shrink beyond that size. 
+
+- Flex-grow: If a container has enough width, it will first default to the flex-basis value and will increase the width of each item until the entire width of the container is filled by each item.
+
+- Flex-shrink: The items will not grow to fit the container width regardless if there is room to grow in the container. However it will shrink beyong the flex-basis until a min-width is set. However if a min-width is not set, then it will just look at the min width of the content.
+
+- The default setting is set at flex-grow 0 and flex-shrink 1.
+
+- Setting a grow-shrink to 1 will take up as much width as possible and shrink to become as small as possible. Grow will grow up to the max-width and shrink will shrink down to the min -width. However, if these properties are not set, then it would respect the width of the contents in the item within a container instead.
+
+- The default for flex-basis is set at auto, which will look at the amount of conten in each of the items. So it will give more flex-basis with items that more content . For example, if there are 4 items inside a container and the last item has more contents, it will priortize that item by giving more width. To avoid this, set the value to 0 rather than auto for flex-basis
+
+- Shorthand for all 3 values above is simmply flex with the order being grow - shrink - basis. A value of flex: 1 1 0 can even be reduced even further as it is commonly set to simply flex: 1. This essential means a flex-grow 1, flex-shrink 1 and flex-basis 0.
+
+- Flex - 2 would mean a grow of 2 and a shrink of 2. Flex - 3 = grow 3, shrink 3. Basically, we are setting a ratio when setting a flex 
+
+*EXCERCISE*
+
+https://appbrewery.github.io/flexbox-sizing-exercise/
+
+/* Write your CSS code below to make the blue items size, grow and shrink like the green ones.*/
+
+.container {
+justify-content: space-between;
+display: flex;
+  
+}
+  
+.container > * {
+
+}
+
+.item1 {
+flex-basis: 200px;
+flex-shrink: 1;
+}
+
+.item2 {
+flex-basis: 200px;
+min-width: 200px
+}
+
+.item3 {
+flex-basis: 400px;
+flex-grow: 3px;
+min-width: 400px
+}
+
+++ Note: The shorter resolution to this excercise would to also just set the flex-shrink values to both 0, as shown by the instructor.
+- This is because all items in a flexbox are allowed to shrink however both items 2 and 3 do not shrink , only item 1. So it's safe to assume that the flex-shrink property is disabled for these two items

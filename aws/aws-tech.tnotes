@@ -1,0 +1,62 @@
+- AZ: Inside every Region is a cluster of Availability Zones. An Availability Zone consists of one or more data centers with redundant power, networking, and connectivity. These data centers operate in discrete facilities in undisclosed locations. They are connected using redundant high-speed and low-latency links.
+
+Availability Zones also have code names. Because they are located inside Regions, they can be addressed by appending a letter to the end of the Region code name. Here are examples of Availability Zone codes:
+
+us-east-1a is an Availability Zone in us-east-1 (N. Virginia Region).
+sa-east-1b is an Availability Zone in sa-east-1 (São Paulo Region).
+Therefore, if you see that a resource exists in us-east-1c, you can infer that the resource is located in Availability Zone c of the us-east-1 Region.
+
+****LPSC****
+
+- Latency: If your application is sensitive to latency (the delay between a request for data and the response), choose a Region that is close to your user base. This helps prevent long wait times for your customers. Synchronous applications such as gaming, telephony, WebSockets, and Internet of Things (IoT) are significantly affected by high latency. Asynchronous workloads, such as ecommerce applications, can also suffer from user connectivity delays.
+
+- Pricing: Due to the local economy and the physical nature of operating data centers, prices vary from one Region to another. Internet connectivity, imported equipment costs, customs, real estate, and other factors impact a Region's pricing. Instead of charging a flat rate worldwide, AWS charges based on the financial factors specific to each Region.
+
+
+
+- Service: Some services might not be available in some Regions. The AWS documentation provides a table that shows the services available in each Region.
+
+- Compliance: Enterprise companies often must comply with regulations that require customer data to be stored in a specific geographic territory. If applicable, choose a Region that meets your compliance requirements.
+
+- Scope of AWS services: Depending on the AWS service that you use, your resources are either deployed at the Availability Zone, Region, or Global level. Each service is different, so you must understand how the scope of a service might affect your application architecture.
+
+When you operate a Region-scoped service, you only need to select the Region that you want to use. If you are not asked to specify an individual Availability Zone to deploy the service in, this is an indicator that the service operates on a Region-scope level. For Region-scoped services, AWS automatically performs actions to increase data durability and availability.
+
+On the other hand, some services ask you to specify an Availability Zone. With these services, you are often responsible for increasing the data durability and high availability of these resources.
+
+- Maintaining resiliency: To keep your application available, you must maintain high availability and resiliency. A well-known best practice for cloud architecture is to use Region-scoped, managed services. These services come with availability and resiliency built in. When that is not possible, make sure your workload is replicated across multiple Availability Zones. At a minimum, you should use two Availability Zones. That way, if an Availability Zone fails, your application will have infrastructure up and running in a second Availability Zone to take over the traffic.
+
+- Edge Location: Edge locations are global locations where content is cached. For example, if your media content is in London and you want to share video files with your customers in Sydney, you could have the videos cached in an edge location closest to Sydney. This would make it possible for your customers to access the cached videos more quickly than accessing them from London. Currently, there are over 400+ edge locations globally.
+
+- Amazon CloudFront delivers your content through a worldwide network of edge locations. When a user requests content that is being served with CloudFront, the request is routed to the location that provides the lowest latency. So that content is delivered with the best possible performance. CloudFront speeds up the distribution of your content by routing each user request through the AWS backbone network to the edge location that can best serve your content.
+
+- There are 3 main ways to make API calls in AWS. They are: 
+1. AWS Mangement Console
+2. AWS Command Line Interface (AWS CLI)
+3. AWS SDKs
+
+- AWS Shared Responsibility: Customer is responsibile for security 'in' the cloud while AWS is responsible for security 'of' the cloud.
+
+-  When you create a VM using EC2, AWS manages the physical host the VM is placed on as well as everything through the hypervisor level. If the host operating system or the hypervisor needs to be patched or updated, that is the responsibility of AWS
+- User is responsbile for tasks like patching the operating systems of your VMs, encrypting data in transit and at rest, configuring firewalls, and controlling who has access to these resources and how much access they have
+
+- AWS responsibility: AWS is responsible for security of the cloud. This means that AWS protects and secures the infrastructure that runs the services offered in the AWS Cloud. AWS is responsible for the following:
+
+Protecting and securing AWS Regions, Availability Zones, and data centers, down to the physical security of the buildings
+Managing the hardware, software, and networking components that run AWS services, such as the physical servers, host operating systems, virtualization layers, and AWS networking components
+The level of responsibility that AWS has depends on the service. AWS classifies services into two categories. The following table provides information about each, including the AWS responsibility.
+
+- Customer responsibility: Customers are responsible for security in the cloud. When using any AWS service, the customer is responsible for properly configuring the service and their applications, in addition to ensuring that their data is secure.
+
+The customers' level of responsibility depends on the AWS service. Some services require the customer to perform all the necessary security configuration and management tasks. Other more abstracted services require customers to only manage the data and control access to their resources. Using the two categories of AWS services, customers can determine their level of responsibility for each AWS service that they use.
+
+- Access keys consist of two parts: Access key ID and Secret acces key
+Similar to a user name and password combination, you need both the access key ID and secret access key to authenticate your requests through the AWS CLI or AWS API. Access keys should be managed with the same security as an email address and password.
+
+- MFA three catageories include: Something you know, something you have and something you are. Example is a password/pin, a timed generated code and a fingerprint/eye to unlock
+
+- When editing a JSON file, a * states that it is a 'wildcard' meaning the service is accesible to all related services. When assigining policies, setting a less permissive policy is recommended.
+
+- Enable console access is set to defaul OFF. A recommended option is to also request the user to create a new password after signing in.
+
+- Assinging policies to groups is PREFERRED rather than assigning to separate users.

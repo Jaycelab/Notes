@@ -1,0 +1,213 @@
+- Tip: Add flex-direction: column on main viewpoint. Set a @media query of min-width: 600-750px to flex-direction:row. This will add a responsive design without needing to add additional spacing once the window becomes smaller. 
+- VW is the 'view window'. Equivalent to the actual users window browser window. Commonly used on "height" properties
+- class selectors can be applied to many elements
+- id selectors should only be applied to one element in a single html file. For example, there should only be 1 ID per html file.
+= Add "GAP" property to add in margins between rows 
+- 1px (pixel) is equal to 1/96th inch(0.26)
+- 1pt (point) is qual to 1/72nd inch (0.35 mm)
+- 1em (full width of M, 100% of parent) . For example, if setting a h1 tag with a 1em property and is enclosed between a body with a 20px width, the h1 would take up 100% of that parent value , or 20px. If setting the value to 2rem, then it would double the width to 40px. It is relative size of the parent container
+- 1rem (r means relative) and is instead relative to the entire root of the page
+- The difference is that rem is a more consistent way of changing the font size and is recomennded rather than using em. This is because setting multiple em values will create an uneven font size through the entire page 
+
+- border has 3 properties. The thickness, the style and the color. The border goes outwards rather than inwards. Once you setup a general border, you can also next a new border (eg. border-top) to further change the overall border.  For example, with a 30px overall border, you can change the border-top to 0px to append the top portion of the border.
+
+-border width: takes in 4 values.  The order of the values is as followed; 1.) top 2.) right 3.) bottom 4.(left. Or top/bottom (1 + 3) or left/right (4 + 2).
+
+-padding: is commonly associated with text and its surrounding container or border. If you have an overall padding , it would expand the entire text content AWAY from the container. This is the spaces WITHIN a container. Adding padding will also be applied without a border, however to see a more visual representation of padding, you can temporarily add a border property to see how much padding is being applied.
+
+margin is the space OUTSIDE the border/container. For example, a container with a border and text will add spaces outside the container with a margin value set. This is especially useful with separating a container away from another container or an image. If two separate containers are aligned with each other, the margin (example margin-right 10px + margin-left 10px) will combine each others value of 20px
+
+CSS Specificity is as followed:
+element selector
+class selector
+attribute selector
+id selector
+
+Type is ranked as followed:
+inline 
+internal external
+
+!important- To override any specificity of a rule you can use the !important relative to it’s selector. This is also useful for debugging and locating errors
+
+- Flexbox axis is determined by the flex-direction property. Default is "row" and can be adjusted to "column" property. 
+- Justify content with be the main content of the flex-direction. It will only work if there are empty spaces. "Center" takes the content and centers within the parent container. "Flex-start" and "flex-end" will either begin from the left or right of the container. "Space-between" will look for extra space of the container and distribute it between the elements. "Space-around" is not commonly used as it distributes even spaces but not at the first and last element (maybe useful in some use cases) "Space-evenly" is a more useful property
+- "Align-items" for flex box is default to stretch. This references to the text inside the elements.
+- *Article* and *Section* elements should contain a *Header* element that includes a *Paragraph* element.
+- *Main* element should include the contents of the post
+- You can add a section element to semantically define individual sections of the article. Headers should always be used to semantically describe the section
+- Having more than one section elements is common in a web page and doesn't require an article element
+- CSS style sheet link should always be the last element of the head section
+- Keywords is not an important part of the Meta tag if aiming for good SEO. It is not recommended for modern web pages as many search engines ignore it and often use it as an indicator for spam
+- Characteristics of meta tags include defining and naming information of data and importance to SEO. 
+- HTTP tags is useful to simulate HTTP response headers but is not recommended to force a HTTP response header. They are also useful if you don’t have access to the server configuration 
+
+#DOM# 
+- HTML
+   HEAD (title)
+	 BODY (intro)
+
+	  HEADER (logo)
+	    NAV (list and list items)
+	      SECTION
+	        UL
+	          LI LI LI
+
+	            INTRO 
+	              MAIN (post intro)
+	                H1 H2 H3 (post title)
+	                  P  P  P (post body)
+	                    FOOTER (social, copyright, emails, etc)
+
+
+
+Responsive Portfolio Tips:
+
+-SECTIONS-
+- 1st Section for the root(hero), Logo, nav list, scroll and heading.
+- 2nd Section for the body which includes intro,  profile photo
+- 3rd section for projects 
+= Footer for any contact and email info
+
+-FLEXBOX-
+- Container 1 to wrap *nav* element as main flexbox container (outer container)
+- Container 2 to wrap inside elements as secondary container (inner element) 
+- Inside elements include *ul* *li* *buttons* *headings*
+- Universal selector. You can add a "*" selector in CSS to apply characteristics for the entire page that has CSS elements. This is a strategy used to override the entire css properties of a page. 
+
+- Flex-flow is shorthand property for defining the direction of the flex container and it's behavior for wrapping
+
+- Justify content is primarily used for rows and align-self for columns.
+- Justify aligns the flexible content on the main axis
+- Common measurements for absolute units is pixels (px) and centimeters (cm)
+- Common measurements for realative values is percentage, em, vh, vw, and rem.
+#FLEXBOX IS SINGLE DIMENSIONAL# 
+- Row has a horizontal main axis and vertical cross axis. When column, the values are opposite
+
+*Measurements*
+- em:  Font size of the parent where present(eg, 2em is twice the size of the current font)
+- rem: Font size of the root element.
+- vh: 1% of the viewport height.
+- vw: 1% of the viewport width.
+- percentage: Denotes a percentage value in relation to it's parent element
+
+*Grid and Flexbox Cheatsheet*
+display: grid | inline-grid
+
+Grid shorthand with default values:
+
+grid
+grid-template-rows: none
+grid-template-columns: none
+grid-template-areas: none
+grid-auto-rows: auto
+grid-auto-columns: auto
+grid-auto-flow: row
+grid-column-gap: 0
+grid-row-gap: 0
+column-gap: normal
+row-gap: normal
+
+#Fr is a fractional unit and 1fr is for 1 part of the available space#
+(This works in conjunction with pixels, percentages, etc)
+
+Grid properties for container:
+grid-template-columns: measurement units | % units |repeat()
+
+grid-template-rows: measurement units | % units |repeat()
+
+grid-auto-columns: measurement unit (fixed value for all columns)
+
+grid-auto-rows: measurement unit (fixed value for all rows)
+
+grid-template: “header header” auto
+
+“main right” 75vh
+
+“footer footer” 20rem
+
+grid-template-areas: “header header”
+
+“main right”
+
+“footer footer”
+
+Gap:
+grid-gap: measurement units
+
+grid-column-gap: measurement units
+
+grid-row-gap: m-unit-1  m-unit-2
+
+Alignment:
+justify-items: start | center | end | stretch
+
+align-items: start | center | end | stretch
+
+place-items: start | stretch /* shorthand for two properties above */
+
+Justification:
+justify-content: start | center | end | stretch | space-between | space-evenly | space-around
+
+align-content: start | center | end | stretch | space-between | space-evenly | space-around
+
+place-content: center | start
+
+Positioning:
+grid-auto-flow: row | column | dense
+
+grid-auto-columns: measurement units
+
+grid-auto-rows: measurement units
+
+Grid properties for items (child)
+grid-column: column position /* E.g. 1/2  */
+
+grid-column-start: column start position
+
+grid-column-end: column end position
+
+grid-row:  row position /* E.g. 1/2  */
+
+grid-row-start: row start position
+
+grid-row-end: row end position
+
+grid-area: “some name” |  /*E.g.  2/1/3/2 */ /* Shorthand for row-column properties above. 
+
+Justification and alignment:
+justify-self: start | center | end | stretch
+
+align-self: start | center | end | stretch
+
+place-self: start | stretch /* shorthand for two properties above */
+
+*Flexbox*
+display: flex | inline-flex
+
+Properties for flexbox container:
+flex-direction: row | row-reverse | column | column-reverse
+
+flex-wrap: wrap | nowrap
+
+align-items: flex-start | flex-end | center | stretch
+
+justify-content: flex-start | flex-end | center | space-between | space-evenly | space-around
+
+Properties for flexbox items (child):
+
+- Shorthand property for grow, shrink and basis
+flex:
+
+flex-grow: factor of flex’s main size    /* E.g. 1 */
+
+flex-shrink: factor of flex’s main size    /* E.g. 0 */
+
+flex-basis: auto | factor of main’s size | measurement unit
+
+order:position in flex /* Set ascending by default */
+
+align-self:  start | center | end | stretch
+
+- repeat (num, fr) is used to write a short hand grid-template row/columns for grid display
+- grid-column: (1/ span 12) *this means that it was begin on the first column and span out twlce columns*
+

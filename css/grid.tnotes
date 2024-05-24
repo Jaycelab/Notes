@@ -1,0 +1,31 @@
+- Flexbox vs Grid. You can think of Flexbox as a tool that helps align contents along a one dimensional line. For instance in a row, Flexbox would be useful in aligning the contents in a horizontal position
+
+- Grid is a tool for laying out contents within a two dimensional grid. Fro instance, you can set 3 items depicting a perfectly shaped square with Main & Footer taking up the left portion and Nav taking up the right portion. The main and footer sections would then be split in half 
+
+- Its commin to have a Flexbox inside a grid and a grid inside a flexbox
+
+- grid-template : Is a combinationg of grid-template rows/columns. You would first define the rows followed by columns 
+
+- AUTO: If setting an auto value to a grid-row, the container fill try to fit the entire CONTENT. However, if setting auto a grid-column, it will instead try to fit 100% 
+
+- Setting a manual width/height when applying grid display is NOT responsive. 
+
+- minmax: When there is enough space on the horizontal, it will give the second column more space. For example on a minmax(400px, 800px), the width can go all the way up to 800 pixels and all the way down to 400px. Eseentially, we are setting a 'stop' at 400px min and 800px max.
+
+- repeat: repeat(how many rows/columns, size of row/ column)
+
+- If setting a grid-template row/column that is less than the set items, it will continue onto a seperate line. :: You can also add a grid-auto-rows on the next line , so that any additional items added that is more than the set items will be automatically applied. IF grid-auto-rows is not set, then it will automatically fill in the width based on the content 
+
+- Grid_item_placement: 
+- Grid container 
+- Grid item items
+- Grid rows and columns are collectivly known as 'tracks'. Row tracks + column tracks
+- Grid cells are between the columns and rows
+- Grid lines can only be changed by using the gap property
+
+- Adding a gap eliminates the need to add padding or margin within the items.
+
+- grid-column-start/end : This specifies when the starting line and ending line of a grid column begins.
+
+** You can always use a -1 value to specify the right hand most line in the grid. A positive number specifies the leftmost line in the grid 
+Essential a -1 means that it will be the 'last' column for future items placed. It is recommended to use -1 as lower numbers may be too difficult to track

@@ -1,0 +1,210 @@
+  • Parameters are temporarily variables that is used as a placeholder for a
+    function expression.
+  • Arguments is the value that is inputted when replacing the parameter of a
+    function
+  • Method is when we pass through an object or another function inside a
+    function express 
+  • You can pass in an argument or method while declaring a variable or
+    console logging the input. Example below outputs the same results
+  
+  let myFavorite = triple; console.log(myFavorite(5));
+  
+  let myFavorite = triple(5); console.log(myFavorite);
+  
+  • When declaring a function input with a method, "function" does not have to
+    be called before the function name. 
+  • An object inside an object can be accessed by first calling the object
+    followed as followed:
+  • Object.object.property
+
+  let dog = { name: 'Louie', age: 12, foods: { favorite: 'Pandesal',
+  leastFavorite: 'Vegetables' }, color: 'white', breed: 'chihuahua', miss:
+  true, loveYou() { alert('so so much....') } } 
+  
+  console.log(dog.foods.leastFavorite);
+  
+  • The Conditional (Ternary) Operator First, we’ll take a look at the syntax
+    of a typical if statement: if ( condition ) { value if true; } else
+    { value if false; } Now, the ternary operator: condition ? value if
+    true : value if false
+  • 
+
+
+JavaScript has a number of built-in object types, such as:
+
+Math, Date, Object, Function, Boolean, Symbol, Array, Map, Set, Promise, JSON,
+etc.
+
+These objects are sometimes referred to as "native objects".
+
+Constructor functions, commonly referred to as just "constructors", are
+special functions that allow us to build instances of these built-in native
+objects. All the constructors are capitalized. To use a constructor function,
+It must prepend it with the operator new.
+
+Besides constructor functions for the built-in objects, I can also define
+custom constructor functions.
+
+Instantiate means to create an instance of a new object in memory.
+**new does 4 things**
+
+1. Creates a blank, plain JavaScript object. 2. Adds a property to the new
+object (__proto__) that links to the constructor function's prototype object
+3. Binds the newly created object instance as the this context (i.e. all
+references to this in the constructor function now refer to the object
+created in the first step). 4. Returns "this" if the function doesn't return
+an object.
+
+ inheritance, encapsulation, abstraction  and polymorphism
+
+ In JavaScript classes, super is used to specify what property gets inherited
+ from the super-class in the sub-class.
+
+An empty object (“empty cabinet”) can be created using one of two syntax's:
+
+let user = new Object(); // "object constructor" syntax let user =
+{};  // "object literal" syntax 
+
+let user = {     // an object name: "John",  // by key "name" : store
+value "John" age: 30        // by key "age" : store value 30 };
+
+*Properties has a key (also known as 'name' or 'identifier'). The values are
+ defined after the 'colon' and can be accessed by either dot or bracket
+ notation. The value can be of any type. 
+*delete keyword is an operator that can be used to remove a property.
+*property names can have multiple words but must be quoted. 
+*Last property value may end with a comma (trailing or hanging comma)
+*Multi word properties does not work with dot notations. The dot requires the
+ key to be a valid variable identifier.(contains no spaces, doesn’t start
+ with a digit and doesn’t include special characters ($ and _ are allowed).
+*We can use square brackets in an object literal, when creating an object.
+ That’s called computed properties.
+
+/* let fruit = prompt("which fruit to buy", "apple?");
+
+let bag = {[fruit]: 5 //name of property is taken from variable above };
+
+alert(bag.apple);*/
+
+let fruit = prompt("Which fruit to buy?", "apple"); let bag = {};
+
+// take property name from the fruit variable
+bag[fruit] = 5;
+
+/*let fruit = 'apple'; let bag = {[fruit + 'Computers']: 5 //
+  bag.appleComputers = 5 };*/ 
+
+In real code, we often use existing variables as values for property names.
+
+For instance:
+
+function makeUser(name, age) { return { name: name, age: age,
+    // ...other properties
+  }; }
+
+let user = makeUser("John", 30); alert(user.name); // John In the example
+above, properties have the same names as variables. The use-case of making a
+property from a variable is so common, that there’s a special property value
+shorthand to make it shorter.
+
+Property value shorthand. Both normal and shorthand properties can be in the
+same object. Object property names has no restrictions.
+Example, 'for', 'let', 'return', etc. There are no limitations  however it
+will automatically be converted to a string. (eg 0 becomes '0') The only
+exception is __proto__. We can’t set it to a non-object value:
+
+Instead of name:name we can just write name, like this:
+
+function makeUser(name, age) { return { name, // same as name: name age,  //
+same as age: age
+    // ...
+  };
+
+   literal notation (initialize notation) = common declaration using curly
+   brackets
+
+ Key value pair is a property name , separated by a colon , and then a value.
+ The property can be enclosed in quotation marks but not necessary as
+ JavaScript interprets it as a string. This will not apply to multi worded
+ key names , in which quotes are needed .This practice should be avoided
+ however and should be written as camelCase. Console.log() is also an example
+ of a "dot notation" The console is an object and the 'log' is it's property.
+ console.log(typeof console);    // -> object --- console.log
+ (typeof console.log);    // -> function
+
+ If the property of an object is another object that has properties itself,
+ this is called a nested property. It's possible to add another property to
+ an existing object by simply adding in another dot along with it's key
+ values. 
+
+ The property of an object can also be a function. A function that is the
+ property of an object will be called a method. Just as the properties of
+ objects describe their characteristics, methods can be treated as their
+ characteristic behavior, or ways of changing the state of an object.
+
+ Assigning an object with an empty new property returns an undefined typeof,
+ rather than a not or null. This is also true when initiating a variable to
+ an empty object.
+
+ Bracket notations [ ] is useful for calculating expressions and also for multi
+ worded keys. Example below:
+
+ let contact = {
+    "first name": "Ronald" }; contact["first name"] = "Tim"; PASSED
+     (bracket notation) contact.first name = "Tim"; // FAILED (dot notation)
+     contact."first name" = "Tim";  FAILED (dot notation)
+
+Default parameters is a way to build a function without passing in any
+arguments. Without a default parameter, a function with now throw an error
+code, however it would return back a NaN result (non-sensible output)
+
+    (OOP Demo Chart) Animal Cat         Bird HouseCat     Tiger      Parrot
+
+
+There are two keywords that are essential in OOP. These are 'extends'
+and 'super'. 
+
+Extends keyword allows to inheritance from an existing class Super keyword
+allows  to "borrow" functionality from a super class, in a sub class.
+
+Animal class = constructor (color & energy) Animal class prototype = 3 methods
+isActive(), sleep(), getColor()
+
+*The isActive() method, whenever ran, will lower the value of energy until it
+ hits 0. The isActive() method will also report the updated value of energy.
+ If energy is at zero, the animal object will immediately go to sleep, by
+ invoking the sleep() method based on the said condition. 
+
+*The Cat class will inherit from Animal, with the additional sound,
+ canJumpHigh, and canClimbTrees properties specific to the Cat class. It will
+ also have its own makeSound() method. 
+
+*The Bird class will also inherit from Animal, but is own specific properties
+ will be quite different from Cat. Namely, the Bird class will have the sound
+ and the canFly properties, and the makeSound method too. 
+
+*The HouseCat class will extend the Cat class, and it will have its own
+ houseCatSound as its special property. Additionally, it will override the
+ makeSound() method from the Cat class, but it will do so in an interesting
+ way. If the makeSound() method, on invocation, receives a single option
+ argument - set to true, then it will run super.makeSound() - in other words,
+ run the code from the parent class (Cat) with the addition of running the
+ console.log(this.houseCatSound). Effectively, this means that the makeSound
+ () method on the HouseCat class' instance object will have two separate
+ behaviors, based on whether we pass it true or false. 
+
+*The Tiger class will also inherit from Cat, and it will come with its own
+ tigerSound property, while the rest of the behavior will be pretty much the
+ same as in the HouseCat class. 
+
+*. Finally, the Parrot class will extend the Bird class, with its own canTalk
+   property, and its own makeSound() method, working with two conditionals:
+   one that checks if the value of true was passed to makeSound during
+   invocation, and another that checks the value stored inside this.canTalk
+   property.  
+
+Note: If I didn't use the super keyword in our sub-classes, once I'd run the
+above code, I'd get the following error: Uncaught ReferenceError: Must call
+super constructor in derived class before accessing 'this' or returning from
+derived constructor. 
+

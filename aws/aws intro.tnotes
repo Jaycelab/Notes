@@ -1,0 +1,67 @@
+- The six advatanges of cloud computing include: 
+	1. pay-as-you-go
+	2. banefit from massive econimies of scale
+	3. stop guessing capacity
+	4. increase speed and agility
+	5. realize cost savings
+	6. go global in minutes 
+
+- AWS has reionas all around the world and names are styles using hyphens and numbers. 
+
+- A region is a cluster of data centers. Choosing am AWS region will depen do the complicanace with data governance and legal requirments. Promixity to customers base location will also greatly reduce latency 
+
+- Availability zones are zones that are inside a region. A zone usually consists of a min of 3 and a maximum of 6 zones. Example: ap-southeast-2a/2b/2c. An AZ is one or more discrete data center with redudant power, network and connectivty. They're separate from each other so that they're isolated from any disasters. Each zone is also connect with high bandiwdth, ultra -lowe latance networking.
+
+- AWS Region considerations include 
+	1. Compliance
+	2. Latency
+	3. Pricing
+	4. Service availability
+
+= Data zones inside AZ. AZ inside of regions
+
+- Edge locations are global locations where content is cached. For example, if your media content is in London and you want to share video files with your customers in Sydney, you could have the videos cached in an edge location closest to Sydney
+
+
+- AWS Wavelength allows applications to use AWS compute and storage services within 5G mobile network
+
+- Requirement set within a certain region that varies.  Latency is how close the IT resoucres between the customer base location is.  Pricing can vary from region to region and dependent on many factors including tax, location etc. Service availabilty may not always roll into all the regions right away. .
+
+- 
+
+- IAM: Identity and Access Management, Global Service. Root account created by default and should never be used or shared. Users are people within the organization and can be grouped, for example can be grouped into developers or operators. Users can belong to multiple groups or no groups. 
+
+
+Elastic load balancing (ELB)
+Service that distributes incoming internet traffic to multiple EC2 instances in 
+case of stoppage or overload
+
+EC2 layout - Sec group, sub net, VPC, Region
+
+Spot Instances - Able to withstand interruptions
+
+AMI, Instance type , Storage config affects EC2 Pricing. Key pair, sec group and IAM role does not affect
+
+AWS Security group can be modified anytime and is used as a firewall to protect against incoming and outgoing EC2 traffic. The changes applied when updating a sec group is immediately 
+
+EC2 auto scaling only applies to horizontal scaling. Meaning that it will apply recommended apps to reduce overload to the CPU. Example, is applying multiple EC2 instances when a single EC2 is overloaded. Vertical scaling is not automated, as this is increasing or decreasing the core components of an EC2 instance (physical hardware eg. hd, cpu, ram )
+
+When using EC2 auto scaling, on demand instances are the best options. Saving plans and reserved are for long term use. Spot instances are not a good choice because spot is recommended for cases in which interruptions can be endured
+
+The main components of an instance type are the CPU, memory and network performance. The operating system and application software are part of the AMI. The public IP address is part of the network settings. 
+
+Amazon EBs is persistent storage. It can be retained after the instance is terminated. Instance store volumes are ephemeral. They can only be rebooted and still retain data. 
+
+EC2 instance store volume cannot be encrypted. If they are stopped or terminated, user data will be lost. Instance volume can also be used as a root volume and will retain volume when rebooted. 
+
+AWS marketplace is for software listings that can configure the AMI 
+
+Assign users to groups and assign permissions to groups
+Create Roles for giving permissions to AWS services. 
+Use access keys for programmatic access (CLI/SDK)
+Avoid root account - only for creating separate accounts 
+
+- If a task takes 24 hours to complete at a rate of 10 cents (2.40), EC2 can break down these taks into 24 seperate tasks at 1 hour each achieving faster results at the same cost, effectivley reducing the time from 24 hours to  1 hour instead.
+
+- Elastic means resizable which translates in having the ability to customize the virtual cpu , storage, ram etc.
+

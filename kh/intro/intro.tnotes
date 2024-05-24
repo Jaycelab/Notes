@@ -1,0 +1,18 @@
+- Microprocessors (CPUs) understand a special kind of languagne known as Machine Code. Machine code is made up of Binary numbers. 
+- Binanry numbers are made up of two states. 0/1 , Off/On, True, False (not to be confused with 0 == True in JS)
+= Low level language is considered machine code. High level language is considered human readable . Ex python, java, javascript
+
+- Source code > (converts) Machine Code > Complier (compies to an executable)
+- Code is compiled separetly and will not work with with other processors and applicatoins. Ex, windows will not work with Linxus or Mac
+- This process can be thought of a translator between two people speaking two different languages. 
+- Interpreter comnverst source code machine only during execution time.
+- Users need to have the language interpreter installed to execute the code
+- There are two ways to compile. Using a interpretator or ahead of time interpretation
+- Ahead of
+- Interpreted languages require the source-code to translate, compile and execute at the user's end which is unlike compiled languages where a compiled, ready to use executable file reaches the user.
+- INterpreters often come with compilers which take source-code and compile it to an optiomised edition known as bytecode before taking it further to excectuion
+- When a program written with an interpreted language such as JavaScript is executed, it is first compiled to optimised bytecode. This compilation step is known as Just-In-Time compilation because it only occurs during the execution of the source code and is not done ahead of time as in the case of compiled languages like C++ or Rust.
+- Python uses the Python Virtual Machine (PVM) to execute bytecode that is generated in a just-in-time compilation step.
+- head of Time compilation refers to the compilation of source-code to an executable before it reaches the end user for use.
+
+Keywords: Specific workds that is part of a programming lanaugae that acts as tokens of instructions put together to form the logic of a program. Eg. if, else, var, function let. Some are reserved and cannot be used 

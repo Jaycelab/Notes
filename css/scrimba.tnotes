@@ -1,0 +1,6 @@
+*Scrimba*
+= Grid-template can be used as a shortcut for grid-template-rows/columns. The value is written as row / column. 
+- The direction of grid can be reflected as a "L" shaped. You begin from the top left to bottom right. 
+- Grid-column start/end can be shorted with just grid-column with a value of "num / num"
+- Span can also be replaced by adding a value after span , which is the number of rows/columns to span 
+- You can use a negative value to target the last column line if you don't know how many columns you will have 

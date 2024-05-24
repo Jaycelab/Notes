@@ -1,0 +1,9 @@
+Render a list of food items from the appetizers variable in an unordered list.
+The appetizers variable is an array that contains strings.
+
+*MAP*
+const appetizers = ['spinach dip', 'Shop', 'About Me'];
+const foodItems = appetizers.map(item => <li>{item}</li>);
+ 
+<ul>{foodItems}</ul>
+//

@@ -1,0 +1,76 @@
+""""
+While Loop
+A while loop allows your code to repeat itself based on a condition you set.
+
+It is similar to an if statement in that you ask a question, and as long as the answer is true, the computer will repeatedly run the code.
+
+
+In the code below, the variable is called counter and starts at zero. The while loop has the condition saying, "while the counter is less than ten do this..."
+
+In this case, print the variable and then add +=1 to that variable. As long as variable is less than 10, the loop will repeat the code.
+
+counter = 0
+while counter < 10:
+  print(counter)
+  counter +=1
+  
+  Infinite Loop
+You have to be really careful that you don't accidentally invoke an infinite loop! This is where the computer will loop code until the end of time. Without a break. Forever. 😭
+
+Fix an infinite loop by adding:
+  variable +=1
+This is just saying "count to 10 by 1 each time." to make the loop end.
+
+Don't forget, if your condition is a > then you might need to -=. This will subtract from the variable instead of adding to it.
+
+counter = 0
+while counter < 10:
+  print(counter)
+  counter +=1
+Can you extend this code to print to 100?
+
+Common Errors
+First, delete any other code in your main.py file. Copy each code snippet below into main.py by clicking the copy icon in the top right of each code box. Then, hit run and see what errors occur. Fix the errors and press run again until you are error free. Click on the 👀 Answer to compare your code to the correct code.
+
+Infinite Loop
+Run this code. What happens?
+
+counter = 0
+while counter < 10:
+  print(counter)
+Nothing happens...
+Run this code. What goes wrong?
+
+counter = 0
+while counter > 6:
+  print(counter)
+  counter += 1
+Exit
+You can use a while loop with text too. In the code below, the while condition is saying "as long as you do not type yes, the computer will type 🥳."
+
+Run this code. What do you see?
+
+exit = ""
+while exit != "yes":
+  print("🥳")
+exit = input("Exit?: ")
+
+ Fix My Code
+👉 Try and fix this code which is full of errors.
+
+First, delete any other code in your main.py file. Copy each code snippet below into main.py by clicking the copy icon in the top right of each code box. Then, hit run and see what errors occur. Fix the errors and press run again until you are error free. Click on the 👀 Answer to compare your code to the correct code.
+
+counter = 0
+while counter < 25:
+  print(counter)
+counter = 0
+while counter >= 12:
+  print(counter)
+  counter += 1
+exit = ""
+while exit = "yes":
+  print("🥳")
+exit = input("Exit?: ")
+
+
+"""

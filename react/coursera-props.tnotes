@@ -1,0 +1,49 @@
+- Props is similar to Javascript declaring a function with a parameter. 
+- Props is short for properties and is used in Reactto pass data from one component to another 
+
+function (App) {
+	return <h1>Hello there</h1>
+}
+
+Babel synatctic sugar breakdown:
+return /*#__PURE__*/React.createElement("h1", null, "Hello there");
+
+The following function above receives three arguments:
+1. The wrapping element to render (h1)
+2. A null value  (which is there to show an absence of an expected javaScript object value)
+3. The inner content that will go inside the wrapping element
+
+- Interestingly, the inner content that will go inside the wrapping element can also be a call to the createElement function. Example below:
+
+function App() { 
+return ( 
+	<div> 
+		<h1>Hello there</h1> 
+	</div> ) };
+
+function App() {
+return React.createElement(
+ "div",
+  null,
+  React.createElement("h1", null, "Hello there")
+   );
+}	
+
+- The third arguemnt is now another .createElement call and is how nexted jsx elements work. Nested JSX structures is mainly a group of nested React.createElement calls passed in to other React.createElement calls as thier third argument.
+
+
+*The Second -null- argument*
+- The second argument of null can also be replaced with an empty ojbect by instead wrapping null with a curly bracket 
+- This object is referred to as the props object and is the main mechanism of sending data from a parent component toa child component in React. Example is shown below:
+
+React.createElement (
+	type, 
+	[props],
+	[...children]
+)
+
+- The inner third argument (children) is what makes it possible to nest elements inside other elements, mimicking the way that HTML works.
+
+
+* NAV Components* 
+- Developers commonly build navigation menus using html on ordered lists. A nav menu si basically just a list which can be styled easily with CSS 

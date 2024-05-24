@@ -1,0 +1,9 @@
+Layer1 Blockchain: Blockchain is technology that helps us record information and makes it difficult to hack or steal. Think of it as a open public spreadsheet that everyone has access to in which we can upload information one by one , ultimately creating 
+a "block". This gets added on top of everyone's computer and distributed across the network. When new information is added, another block is created that changes the previous block so that we are able to see what was true in previous block and what is currently true at current block.
+
+As this keeps building and growing to become a bigger spreadsheet or "ledger" , each block becomes chained together to form a "blockchain". In essence, a blockchain can be viewed as a shared spreadsheet in which we have access to not only add to the blocks, but have access to see any previous changes 
+
+Solana is considered a "layer 1" blockchain is that it is the base layer. It's the layer validates the information. These also include Bitcoin and Solana as an example.
+
+Four Benefits of Solana:
+-  Solana has efficient speed possible of handling over 50-65K transactions per second at it's peak, compared to Ethereum that processes around 15 to 40 transaction per second

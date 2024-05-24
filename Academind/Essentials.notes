@@ -1,0 +1,141 @@
+components.notes
+- React is responsible for rendering the entire interface
+- useState is feature of React that allows us to use state in a functional component and creates
+a dynamic React managed variable
+- Declarative Clode- With React, you define the target UI state(s)- not the steps to get there.
+Instead, React will figure out & perform the neccasry steps to get to the target state
+
+*COMPONENTS*
+- With React, you write declarative code and define the target HTML structure & UI...not the steps to get there
+
+- Component Functions Must follow Two Rules
+ Name Starts with Uppercase Character
+ Mulit-word names should be written in PascalCase(e.g. "MyHeader")
+ It's recommended to pikc a name that describes the UI building block
+ 
+ Returns renderable content
+ The functions must return a value that ca ben rendered or displayed on screen by React
+ In most cases, Return JSX. Also allowed: string, number, boolean, null, array of allowed values
+ 
+ - When returning a function component, multi lines will need to be wrapped in paranthesis
+ - Shortcut self closing tag can be shortened . E.g <Header></Header> === <Header/>
+ - Using a shortended componenet, always requires a forward slash
+ 
+ - JSX is a file extension that is NOT supported by the browser. 
+ 
+ - index.jsx is used as a argument with render as it is the first or main entry ppoint of a react app. This is where import ReactDOM is imported that belongs to the ovarall React Project. It is then rendered by passing the App argument when rendering on a createRoot object with id  Root. This renders and injects a react component in the HTML page .
+ 
+ - Component tree is a heirachy of components. Analyzed & renered by React step by step. 
+ - Custom components are not showed up in the DOM . It is only analyzed and then combines all the JSX to generate the overall DOM
+ 
+ - Built in Components name starts with a lowercase character. Custom components always start with uppercase letter
+ 
+ - Built in only allows valid , officially defined HTML elements whereas custom components are defined and is wrapped in other custom components
+ 
+ - Built in is rendered as DOM nodes by React (i.eg, displayed on the screen). Custome components "traverses" the component three until it has only built in components left'
+ 
+ - JSXs purpose is to allow the target HTML code inside of a componenet. It is used to define the target UI/HTML code
+ 
+ - With JSX, React handles components inside and derives a component tree that's then used to perform commands that update the website DOM
+ 
+ - Custom components are HTML like elements that is inserted inside of a JSX code test
+ - Arrays can also be accessed within a JSX wrapper , allowing it to target the different elemetns in an index.
+ 
+ - It is recommneded to import a image file via import to avoid errors during deployment
+ 
+ *PROPS*
+ - Components can be seperated by adding customer attributes within each components
+ - You can split props / attributes across multiple lines for better readability
+ - One example of props using img as an example is to first import the image. We then assign this props inside a customer attribute (Eg. img src ) inside a custom componenet
+ - Props can be only be added once when used as a parameter. This will be passed in as an object with key value pairs
+ - React allows you to pass data to components via a concept called "Props"
+ - JSX code that uses a component > Set Props > Component > Receives Props > Component Functions
+ = Set component input data via 'customer HTML properties' also called props
+ - Defines internal logic + JSX code that should be rendered
+ - Receives props parameter with configuration data
+ - Props are customer HTML attributes set on components. React merges all props into a single object and is then passed to the component function as the first argument by React.
+ - Passing props as a paremeter within a regular function parameter will not work
+- Every custom components will recieve props regardless if an attribute is passed. 
+- Special bult in children prop that is set by React.  It is set to the props
+- Children pops is set by React and uatomaticlaly passes a special props named "children" to every custom componenet
+- Content for children. The content between component opneing and closing tags is used as a value for the special children prop
+
+
+*QUIZ*
+How can you assign a dynamic value to an HTML element attribute?
+Via the same syntax you use for dynamic values in JSX in general: Curly braces
+
+*Storing Components*
+- Its recommended to store CSS files in the same location as the JSX relative file
+
+***************************************************************
+
+components.notes
+- React is responsible for rendering the entire interface
+- useState is feature of React that allows us to use state in a functional component and creates
+a dynamic React managed variable
+- Declarative Clode- With React, you define the target UI state(s)- not the steps to get there.
+Instead, React will figure out & perform the neccasry steps to get to the target state
+
+*COMPONENTS*
+- With React, you write declarative code and define the target HTML structure & UI...not the steps to get there
+
+- Component Functions Must follow Two Rules
+ Name Starts with Uppercase Character
+ Mulit-word names should be written in PascalCase(e.g. "MyHeader")
+ It's recommended to pikc a name that describes the UI building block
+ 
+ Returns renderable content
+ The functions must return a value that ca ben rendered or displayed on screen by React
+ In most cases, Return JSX. Also allowed: string, number, boolean, null, array of allowed values
+ 
+ - When returning a function component, multi lines will need to be wrapped in paranthesis
+ - Shortcut self closing tag can be shortened . E.g <Header></Header> === <Header/>
+ - Using a shortended componenet, always requires a forward slash
+ 
+ - JSX is a file extension that is NOT supported by the browser. 
+ 
+ - index.jsx is used as a argument with render as it is the first or main entry ppoint of a react app. This is where import ReactDOM is imported that belongs to the ovarall React Project. It is then rendered by passing the App argument when rendering on a createRoot object with id  Root. This renders and injects a react component in the HTML page .
+ 
+ - Component tree is a heirachy of components. Analyzed & renered by React step by step. 
+ - Custom components are not showed up in the DOM . It is only analyzed and then combines all the JSX to generate the overall DOM
+ 
+ - Built in Components name starts with a lowercase character. Custom components always start with uppercase letter
+ 
+ - Built in only allows valid , officially defined HTML elements whereas custom components are defined and is wrapped in other custom components
+ 
+ - Built in is rendered as DOM nodes by React (i.eg, displayed on the screen). Custome components "traverses" the component three until it has only built in components left'
+ 
+ - JSXs purpose is to allow the target HTML code inside of a componenet. It is used to define the target UI/HTML code
+ 
+ - With JSX, React handles components inside and derives a component tree that's then used to perform commands that update the website DOM
+ 
+ - Custom components are HTML like elements that is inserted inside of a JSX code test
+ - Arrays can also be accessed within a JSX wrapper , allowing it to target the different elemetns in an index.
+ 
+ - It is recommneded to import a image file via import to avoid errors during deployment
+ 
+ *PROPS*
+ - Components can be seperated by adding customer attributes within each components
+ - You can split props / attributes across multiple lines for better readability
+ - One example of props using img as an example is to first import the image. We then assign this props inside a customer attribute (Eg. img src ) inside a custom componenet
+ - Props can be only be added once when used as a parameter. This will be passed in as an object with key value pairs
+ - React allows you to pass data to components via a concept called "Props"
+ - JSX code that uses a component > Set Props > Component > Receives Props > Component Functions
+ = Set component input data via 'customer HTML properties' also called props
+ - Defines internal logic + JSX code that should be rendered
+ - Receives props parameter with configuration data
+ - Props are customer HTML attributes set on components. React merges all props into a single object and is then passed to the component function as the first argument by React.
+ - Passing props as a paremeter within a regular function parameter will not work
+- Every custom components will recieve props regardless if an attribute is passed. 
+- Special bult in children prop that is set by React.  It is set to the props
+- Children pops is set by React and uatomaticlaly passes a special props named "children" to every custom componenet
+- Content for children. The content between component opneing and closing tags is used as a value for the special children prop
+
+
+*QUIZ*
+How can you assign a dynamic value to an HTML element attribute?
+Via the same syntax you use for dynamic values in JSX in general: Curly braces
+
+*Storing Components*
+- Its recommended to store CSS files in the same location as the JSX relative file

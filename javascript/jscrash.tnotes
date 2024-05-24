@@ -1,0 +1,8 @@
+Math.pow(par1,par2) =  Exponents
+typeof = Determines type of input
+str = converts to string. You can also concate and use operators
+padStart - Adds additional characters relative to the first input parameter number in front
+padEnd - Similar but adds to end 
+trim = removes whitespace
+trimStart/trimEnd = Trim only beginning and end 
+split - splits the delimiter from a string (example, commma from a string)

@@ -1,0 +1,248 @@
+- Reacts render() method only updates DOM elements that have changed, meaning that if you render the exact same thing twice in a row, the second render will do nothing. 
+
+*Virtual DOM*
+- By comparing the new virtual DOM with a pre-update version, React figures out exactly which virtual DOM objects have changed. This process is called “diffing.”
+
+- Steps when DOM is updated in React
+1. The entire virtual DOM gets updated
+2. The virtual DOM gets compared to previous DOM before it updated. React then figures out which objects have changed.
+3. The changed objects, and the changed objects only, gets updated on the real DOM.
+4. Changes on the real DOM is reflected on the screen in real time, hence the changes 'reacts'
+
+- Deconstructing arrays can be set by first assigning a variable to an object (key value pairs)
+Followed by a bracket wrapped variable(s) asigned to original variable
+
+*Function Deconstructing*
+let truck = {
+  model: '1977 Mustang convertible',
+  maker: 'Ford',
+  city: 'Detroit',
+  year: '1977',
+  convertible: true
+};
+
+const printCarInfo = ({model, maker, city}) => {
+  console.log(`The ${model}, or ${maker}, is in the city ${city}.`);
+};
+
+printCarInfo(truck);
+// Prints: The 1977 Mustang convertible, or Ford, is in the city Detroit.
+
+- Destructuring is a way to unpack values from arrays and objects and assign them to variables or parameters
+
+- In JSX, it is required to include a self closing tag (slash before the final angle bracket) as opposed to HTML where it is optional. Without a slash, it will create an error in react
+
+- Expressions in JSX needs to be wrapped inside {} brackets if within an element or it will evaluate it as "text" similar to HTML.
+
+- Curly braces themselves won't be treated as JSX or as Javascript. Instead they are treated with markets that signal the beginning and end of a Javascript injection into JSX. 
+
+- Variables can be accessed inside of a JSX expression even if it is outside of it's scope
+
+*JSX* 
+- When writing JSX, it's common to use variables to set attributes. For example:
+
+const sideLength = "200px";
+
+const panda = (
+<img 
+  src = "images/panda.jpg"
+  alt = "panda"
+  height = {sideLength}
+  width = {sideLength}
+/>
+);
+
+- Creating a new line per attribute will make the code more easily readable. 
+- Object properties are also often used to SET attributes. Example below: 
+
+const pics = {
+  panda: "http://bit.ly/1Tqltv5",
+  owl: "http://bit.ly/1XGtkM3",
+  owlCat: "http://bit.ly/1Upbczi"
+}; 
+
+const panda = (
+  <img 
+    src={pics.panda} 
+    alt="Lazy Panda" />
+);
+
+const owl = (
+  <img 
+    src={pics.owl} 
+    alt="Unimpressed Owl" />
+);
+
+const owlCat = (
+  <img 
+    src={pics.owlCat} 
+    alt="Ghastly Abomination" />
+); 
+
+*Event Listener*
+- An event listerners attribute's name should be sometihng similar to onClick or onMouseOver. The word 'on' plus the type of event that you are listening for. Refer to https://react.dev/reference/react-dom/components/common for common event listener names 
+
+- An event listerners attribute value should be a function. The above example above would only work if the name were a valid function that had been defined somewhere else
+
+- Event listeners in HTML is written in all lower case, however in JSX event listerners are written similar to Javascript or camelCase, in this case onClick or onMouseOver. Example of an image onClick event listener below: 
+
+const kitty = (
+  <img onClick={makeDoggy}
+    src="https://content.codecademy.com/courses/React/react_photo-kitty.jpg" 
+    alt="kitty" />
+);
+
+root.render(kitty);
+
+- You CANNOT inject if statements inside a JSX expression. However it is possible to create an expression  if it is NOT injected between JSX tags but on the outside. Example below: 
+
+if (user.age >= drinkingAge) {
+  message = (
+    <h1>
+      Hey, check out this alcoholic beverage!
+    </h1>
+  );
+} else {
+  message = (
+    <h1>
+      Hey, check out these earrings I got at Claire's!
+    </h1>
+  );
+}
+
+Excercise example below using expression with img element
+
+if (coinToss() === "headers") {
+  
+  ///onbject, key-value
+  img = <img src = {pics.kitty} />
+} else {
+  img = </img sec ={pics.odoggy} />
+};
+
+
+*Ternary Operator*
+
+//using bracket notation with text as the object key value
+
+const pics = {
+  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg'
+};
+
+const img = <img src={pics[coinToss() === "heads" ? kitty : doggy]} />;
+
+root.render(img);
+
+*&& Operator*
+ {judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
+
+ *MAP in JSX*
+ - Uses arrow functions .map(var => )
+Example:
+
+const strings = ['Home', 'Shop', 'About Me'];
+
+const listItems = strings.map(string => <li>{string}</li>);
+
+<ul>{listItems}</ul>
+
+Sets an array of strings  and .map() returns a new array of <li>
+
+{listItems} will evaluate to an array, because its the returned value of map()
+
+// This is fine in JSX, not in an explicit array:
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+
+// This is also fine!
+const liArray = [
+  <li>item 1</li>, 
+  <li>item 2</li>, 
+  <li>item 3</li>
+];
+
+<ul>{liArray}</ul>
+
+
+// forEach()
+- We can use .forEach() to create a list of JSX elements from an array as long as we are using .forEach() from outside a JSX expression as .forEach() does not evaluate to a value like .map() does. That said, .forEach() takes a little more code to do the same thing that .map() can do/
+
+- For example:
+Using .forEach():
+
+const myArr = ['one', 'two', 'three'];
+
+const myArrMadeFromForEach = []; // we create a new array which will evaluate to a value when we inject it into a JSX expression
+
+myArr.forEach((item, i) => myArrMadeFromForEach.push(<li key={item+i}>{item}</li>)); // we push a JSX element containing a value to our 'myArrMadeFromForEach' because `.forEach()` does not return any value, nor does it mutate the array on which it is called
+
+const myList = (
+  <ul>{myArrMadeFromForEach}</ul> // `myArrMadeFromForEach` will evaluate to an array of `<li>` elements
+)
+
+ReactDOM.render(myList, document.getElementById('app'));
+
+*KEYS
+ 
+- A key is a JSX attribute. The attribute’s name is key. The attribute’s value should be something unique, similar to an id attribute.
+
+- Keys do not do anything. React uses them internally to keep track of lists. If you don't use keys when you're supposed to, React might accidetally scramble your list items into the wrong order.
+
+- Not all lists need to have keys. A list needs keys if either of the following is true:
+
+- The list items have memory from one render to the next. For instance, when a to-do list renders, each item must “remember” whether it was checked off. The items shouldn’t get amnesia when they render.
+
+- A list’s order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
+
+- If neither of these conditions is true, then you don’t have to worry about key
+
+Example below. TO BE REVIEWED
+
+const peopleList = people.map((person,i) =>
+  // expression goes here:
+  <li key={'person_' + i}>{person}</li>
+);
+
+// i is the index of the item, person in this case, in the array map is acting on, people in this case. The initial value of i will be the initial index of an array in JavaScript, 0. The handling of i is done behind the scenes for you. Array.map will pass in a number of things into the function you give it you can find them here:
+
+// The key will be a string concatenated from a smaller string of your choice(eg. “person_”) plus an incremented number(eg. i).
+
+So the output there will be a series of elements with keys of “person_1”, “person_2”, “person_3”, etc.
+
+The quotation marks are because it’s just a regular string, and the underscore is - I’m assuming - a convention for human readability.
+
+*React.createElement*
+- Every JSX element is secretly a call to React.createElement(). The compiler transforms the JSX element into the method React.createElement();
+
+// Review React.createElement() doc:
+https://react.dev/reference/react/createElement
+
+//TAKES 3 ARGUMENTS
+const greatestDivEver = React.createElement(
+  "div", 
+  null, 
+  "i am div"
+  );
+
+*React order*
+1.A JSX element renders.
+2.The entire virtual DOM gets updated. 
+3. The virtual DOM is compared to what it looked like before it updated to figure out which objects have changed.
+4. The changed objects, and the changed objects only, get updated on the real DOM.
+5. Changes on the real DOM cause the screen to change.
+
+*Animal Fun Facts Project*
+
+- Import
+A.) Add import{} from "./xxxxx";
+B.) Add import React from "react";
+C.) import {createRoot} from "react-dom/client";
+
+- Variables
+A.) Set variables targeting DOM with document.getElementById() or querySelector();
+B.) Set root variable with method createRoot() passing targeted variable
+// creating a React root renders content

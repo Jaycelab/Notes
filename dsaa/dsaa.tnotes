@@ -1,0 +1,27 @@
+- Arrays, multidimensional arrays, lists, hash tables, binary trees, binary search trees, red black trees, etc.
+
+<BIO O> 
+- Big O is way to categorize algorithms time or memory requirements based on input. Not to be an exact measurement as it will not tell you how many CPU cycles it takes, instead is it meant to generalize the growth of your algorithm. 
+- Helps to make decisions about what data structures and algorithms to use.
+- Knowing how they will perform will greatly create the best possible program out there. 
+- Memory is not computationally free but in the matter of thinking about algorithms, we don't necessarily thing about that.
+- Languages like Go or JavaScript is often more difficult as it pays heavier penalties since the memory can be kept around, grows faster, and causes complete halts in the program for cleanups
+- Growth is with respect to the input. Constants are dropped O(2N) -> O(N) and this makes sense. That is because Big O is meant to describe the upper bound of the algorithm (the growth of the algorithm). The constant eventually becomes irrelevant. 
+
+<Take the following:>
+-N = 1, O(10N) = 10, O(N^2) = 1 
+-N = 5, O(10N) = 50, O(N^2) = 25 
+-N = 100, O(10N) = 1,000, O(N^2) = 10,000 // 10x bigger
+-N = 1000, O(10N) = 10,000, O(N^2) = 1,000,000 // 100x bigger 
+-N = 10000, O(10N) = 100,000, O(N^2) = 100,000,000 // 1000x bigger
+
+- N relationship. O(N) time complexity.Look for loops
+- As we add more strings to the array, the time to compute also increases. For example: a 50% increase in string length will also increases the computation by 50%
+N = 1, O(10N) = 10, O(N^2) = 1 
+(n is equal to 10 as N= 1 times 10N. N squared === 1 )
+N = 5, O(10N) = 10N*5/  O(N^2) = 25 
+(n is equal to 50 as 5n* 10N = 50. 5N squared = 25)
+
+- *There is practical vs theoretical differences* Just because N is faster than N^2, doesn't mean practically it's always faster for smaller inputs.
+- As constants are dropped, O(100N) is faster however may not be true for smaller sets of inputs 
+(Example 0(100N) n = 100 is equivalent = 1000, however as it increases to say 500, the difference is 200,000 (vs 50,000) 
