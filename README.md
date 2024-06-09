@@ -14,7 +14,6 @@ This repository is for storing and organizing my personal notes
 - [Python](./python/)
 - [React](./react/)
 - [Rust](./rust/)
-- [Misc](./misc/)
 
 ## Programming
 
