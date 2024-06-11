@@ -1,11 +1,11 @@
 -- The absolute running time of an algorithm cannot be predicted since it depends on a number of factors:
 
-- Languange used to implement the algorithm
+- Language used to implement the algorithm
 - Computer the program runs on
 - Other programs running simultaneously
-- Qualty of the operating system 
+- Quality of the operating system 
 
-We evaluate the performance of an alogorithm in terms of its input size
+We evaluate the performance of an algorithm in terms of its input size
 
 - Time complexity: Amount of time taken to run as a function of input size
 - Space complexity - Amount of memory to run as a function of input size 

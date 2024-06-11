@@ -203,17 +203,17 @@ grid-area: is a property that we can set a value after specifically naming a val
 
 - space-between creates spaces between the elements but does not create a margin for the first and last items. space-around creates spaces around all elements but does not leave an equal space between the first and last element. Space-evenly will create even spaces between all elements
 
-- Align items is similar to justify content however the axis is align on the cross axis, which would be horizontal in a default flex display layout. A height will also need to be applied to see the changes (if set to row). A common value would set to a 100% or a vh (viewport height) which is the height of the window that youre viewing the page .
+- Align items is similar to justify content however the axis is align on the cross axis, which would be horizontal in a default flex display layout. A height will also need to be applied to see the changes (if set to row). A common value would set to a 100% or a vh (viewport height) which is the height of the window that you're viewing the page .
 
 - Vh: if setting a 70vh container , it would set an approximate 2/3 of the page or close to around 66.66% of the page
 
-- align-self : sets a single element to have it's own alignment within the cross axis. For example, if an element of a container has is positioned center, you can set a particiular element to be an independent item and separate itself from the remaining elements.
+- align-self : sets a single element to have it's own alignment within the cross axis. For example, if an element of a container has is positioned center, you can set a particular element to be an independent item and separate itself from the remaining elements.
 
-- align-content is similar to align-items however it only works when the flex-wrap is set to wrap. So when its set to wrap and you want to specify how the content should align, then thats when align content would be applied. So essential, having an align-content center with a flex-wrap of wrap will align the items center when the screen page is minimized to wrap and fit around its width container (if set to defaul flex row)
+- align-content is similar to align-items however it only works when the flex-wrap is set to wrap. So when its set to wrap and you want to specify how the content should align, then thats when align content would be applied. So essential, having an align-content center with a flex-wrap of wrap will align the items center when the screen page is minimized to wrap and fit around its width container (if set to default flex row)
 
 - align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
 
-- One trick covered in flexbox froggy is setting a flex-flow (which is a shorthand version of flexdirection and wrap) to have both values as reverse. For instance, you can set the values to be both column-reverse and wrap-reverse.
+- One trick covered in flexbox froggy is setting a flex-flow (which is a shorthand version of flex direction and wrap) to have both values as reverse. For instance, you can set the values to be both column-reverse and wrap-reverse.
 
 - wrap-reverse is a valid value that is not commonly covered? My solution for last challenge on flexbox froggy: flex-flow: column-reverse wrap-reverse;
   justify-content: center;
