@@ -8,7 +8,7 @@ Therefore, if you see that a resource exists in us-east-1c, you can infer that t
 
 ****LPSC****
 
-- Latency: If your application is sensitive to latency (the delay between a request for data and the response), choose a Region that is close to your user base. This helps prevent long wait times for your customers. Synchronous applications such as gaming, telephony, WebSockets, and Internet of Things (IoT) are significantly affected by high latency. Asynchronous workloads, such as ecommerce applications, can also suffer from user connectivity delays.
+- Latency: If your application is sensitive to latency (the delay between a request for data and the response), choose a Region that is close to your user base. This helps prevent long wait times for your customers. Synchronous applications such as gaming, telephony, WebSockets, and Internet of Things (IoT) are significantly affected by high latency. Asynchronous workloads, such as e-commerce applications, can also suffer from user connectivity delays.
 
 - Pricing: Due to the local economy and the physical nature of operating data centers, prices vary from one Region to another. Internet connectivity, imported equipment costs, customs, real estate, and other factors impact a Region's pricing. Instead of charging a flat rate worldwide, AWS charges based on the financial factors specific to each Region.
 
@@ -31,14 +31,14 @@ On the other hand, some services ask you to specify an Availability Zone. With t
 - Amazon CloudFront delivers your content through a worldwide network of edge locations. When a user requests content that is being served with CloudFront, the request is routed to the location that provides the lowest latency. So that content is delivered with the best possible performance. CloudFront speeds up the distribution of your content by routing each user request through the AWS backbone network to the edge location that can best serve your content.
 
 - There are 3 main ways to make API calls in AWS. They are: 
-1. AWS Mangement Console
+1. AWS Management Console
 2. AWS Command Line Interface (AWS CLI)
 3. AWS SDKs
 
-- AWS Shared Responsibility: Customer is responsibile for security 'in' the cloud while AWS is responsible for security 'of' the cloud.
+- AWS Shared Responsibility: Customer is responsible for security 'in' the cloud while AWS is responsible for security 'of' the cloud.
 
 -  When you create a VM using EC2, AWS manages the physical host the VM is placed on as well as everything through the hypervisor level. If the host operating system or the hypervisor needs to be patched or updated, that is the responsibility of AWS
-- User is responsbile for tasks like patching the operating systems of your VMs, encrypting data in transit and at rest, configuring firewalls, and controlling who has access to these resources and how much access they have
+- User is responsible for tasks like patching the operating systems of your VMs, encrypting data in transit and at rest, configuring firewalls, and controlling who has access to these resources and how much access they have
 
 - AWS responsibility: AWS is responsible for security of the cloud. This means that AWS protects and secures the infrastructure that runs the services offered in the AWS Cloud. AWS is responsible for the following:
 
@@ -50,13 +50,13 @@ The level of responsibility that AWS has depends on the service. AWS classifies 
 
 The customers' level of responsibility depends on the AWS service. Some services require the customer to perform all the necessary security configuration and management tasks. Other more abstracted services require customers to only manage the data and control access to their resources. Using the two categories of AWS services, customers can determine their level of responsibility for each AWS service that they use.
 
-- Access keys consist of two parts: Access key ID and Secret acces key
+- Access keys consist of two parts: Access key ID and Secret access key
 Similar to a user name and password combination, you need both the access key ID and secret access key to authenticate your requests through the AWS CLI or AWS API. Access keys should be managed with the same security as an email address and password.
 
-- MFA three catageories include: Something you know, something you have and something you are. Example is a password/pin, a timed generated code and a fingerprint/eye to unlock
+- MFA three catagories include: Something you know, something you have and something you are. Example is a password/pin, a timed generated code and a fingerprint/eye to unlock
 
-- When editing a JSON file, a * states that it is a 'wildcard' meaning the service is accesible to all related services. When assigining policies, setting a less permissive policy is recommended.
+- When editing a JSON file, a * states that it is a 'wildcard' meaning the service is accessible to all related services. When assigning policies, setting a less permissive policy is recommended.
 
-- Enable console access is set to defaul OFF. A recommended option is to also request the user to create a new password after signing in.
+- Enable console access is set to default OFF. A recommended option is to also request the user to create a new password after signing in.
 
-- Assinging policies to groups is PREFERRED rather than assigning to separate users.
+- Assigning policies to groups is PREFERRED rather than assigning to separate users.

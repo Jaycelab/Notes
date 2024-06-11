@@ -2,7 +2,7 @@ Bootstrap
 
 Pros:
 Easy, fast to use, free plans
-Consistent styling, browser compatability
+Consistent styling, browser compatibility
 Great for a fast and simple website
 
 
@@ -37,9 +37,9 @@ Not suitable for large projects with customizations
 - If the overall width is less than 576px, all the items will automatically shrink to 100% of its content. Essentially it will be as if all the items now have the property 'col'
 
 Multiple Breakpoints
-- You can also add multile breakpoints to a single div. Meaning it will reach depending on the screen size and how much it reduces and grows.
+- You can also add multiple breakpoints to a single div. Meaning it will reach depending on the screen size and how much it reduces and grows.
 
-Automatic Sized Column: If a column does not have a specified sized column, it will automatically adjust in sideto take up whatever proportion remains. Example of col-2 and col-4 is set with a 3rd col but no sized column, it will automatically be as if the 3rd col is now col-6. 
+Automatic Sized Column: If a column does not have a specified sized column, it will automatically adjust inside to take up whatever proportion remains. Example of col-2 and col-4 is set with a 3rd col but no sized column, it will automatically be as if the 3rd col is now col-6. 
 
 <!-- Modify the HTML code for the purple boxes below so it behaves like the green ones. -->
   <div class="row">
@@ -47,7 +47,7 @@ Automatic Sized Column: If a column does not have a specified sized column, it w
     <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
   </div>
   
-  In the example above, we can actually eliminate the need to put col-sm-12 as the breakpoints target sizes ABOVE the breakpioint. Since we are stating that the desktop size be set to 50%, it will automatically be displayed back to 100% when it reaches BELOW the breakpoint 
+  In the example above, we can actually eliminate the need to put col-sm-12 as the breakpoints target sizes ABOVE the breakpoint. Since we are stating that the desktop size be set to 50%, it will automatically be displayed back to 100% when it reaches BELOW the breakpoint 
 
   <!-- Modify the HTML below to make the blue boxes behave like the red ones. -->
   <div class="row">

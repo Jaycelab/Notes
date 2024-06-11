@@ -107,7 +107,7 @@ Example below with 3 columns and 2 rows
 grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1 fr;
 grid-template-rows: 100px 50px;
 
-Any subsequent columnns or rows will a default value. However you can use the following below to set a defauly for any subsquent elements that you add in the future by using the properties below:
+Any subsequent columns or rows will a default value. However you can use the following below to set a default for any subsequent elements that you add in the future by using the properties below:
 grid-auto-columns: ;
 grid-auto-rows: ;
 
@@ -116,7 +116,7 @@ grid-auto-flow: ;
 
 grid-column: 10/11 means that you are selecting a fixed location value by assigning a start of column 10 and ending in column 11. This also applies to grid-row
 
-**Note: Adding an element after the selected grid-column element will fill in the empty spaces that are not assigned, rather thann place the elements after. This is possible with 
+**Note: Adding an element after the selected grid-column element will fill in the empty spaces that are not assigned, rather than place the elements after. This is possible with 
 grid-auto-flow: dense;  You can also use row-dense or column-dense
 
 grid-column-gap and grid-row-gap can be shorted by 
@@ -124,11 +124,11 @@ grid-gap: row column . You can also enter 1 value to assign both columns and row
 
 Align-items: Positions items vertically within a grid cell. It defaults at stretch
 
-Justify-items: Positions items horizontally (x-axis) within a cell. Default is also set to streth
+Justify-items: Positions items horizontally (x-axis) within a cell. Default is also set to stretch
 
 place-items : is the shortened version for align and justify items with the order being center followed by stretch. You can also assign a single value to assign both properties. 
 
-align-content / justify-content / place-content - Assigns an element vertially within a CONTAINER. It is defautl start
+align-content / justify-content / place-content - Assigns an element vertically within a CONTAINER. It is default start
 
 As a summary, items are usually the text or images within a cell. And content is the cell within a grid container 
 
@@ -142,7 +142,7 @@ grid-template-area:
 'main' 'main' 'sidebar'
 'footer' 'footer' 'footer'
 
-(**The reason we list 'header' 3 times is because it is a visiual represenation of EACH column. In this case , since we previosly defined 3 columns, we would be listing header 3 times to span the full width of the container)
+(**The reason we list 'header' 3 times is because it is a visual representation of EACH column. In this case , since we previously defined 3 columns, we would be listing header 3 times to span the full width of the container)
 
 .header{
 	grid-area: header;
@@ -157,11 +157,11 @@ grid-template-area:
 	grid-area: footer;
 }
 
-Example above, the 3 columns of header and footer represent a column of three rows. And 2 columns for MAIN and 1 column for sidebar as reference aboved ('main' 'main' 'sidebar')
+Example above, the 3 columns of header and footer represent a column of three rows. And 2 columns for MAIN and 1 column for sidebar as reference above ('main' 'main' 'sidebar')
 
 You can think of grid area as a 'blueprint' of your cells within a container. You can name them anything in the grid-area section however its best advised to reference a similar name as the class
 
-grid-template: is a shorthand version in which you can combine grid-template-column/row + grid-template-area. The values are in between a set of quotes and not indvidually Example below:
+grid-template: is a shorthand version in which you can combine grid-template-column/row + grid-template-area. The values are in between a set of quotes and not individually Example below:
 
 grid-template: 
 'h h' h' 60px
@@ -177,33 +177,33 @@ grid-auto-flow: row;
 
 grid: 50 px 200px / repeat (3, 1fr); (**rows and columns)
 
-We can set a row and column to be both implicit and explicity however we CANNOT set a value for each row and column to be both. The following below is fine:
+We can set a row and column to be both implicit and explicitly however we CANNOT set a value for each row and column to be both. The following below is fine:
 
 grid: auto-flow 100px / repeat (3, 1fr);
 
 If manually entering a start and end, you can use a negative value for the end value to span the entire column/row. 
-We can alo use the name as the value when determing the width/height. For example , we can set grid-column-end: col-3;
+We can alo use the name as the value when determining the width/height. For example , we can set grid-column-end: col-3;
 
 Other examples are span with a value that determines how many columns/row we want to span. Example, span 3 , will create a grid-column-end of 3
 
-align/justify/place-self- Allows to poistion a single item within anywhere from its own cell. For example, if you have 6 elements in a single container, you can set a fixed location for cell 5 anywhere inside the container. place-self is also a short hand version for both properties
+align/justify/place-self- Allows to position a single item within anywhere from its own cell. For example, if you have 6 elements in a single container, you can set a fixed location for cell 5 anywhere inside the container. place-self is also a short hand version for both properties
 
-grid-area- Is a entire shorthand version of 4 values seperated by a /
+grid-area- Is a entire shorthand version of 4 values separated by a /
 
 
 grid row start, grid column start, grid row end, grid column end 
 
 grid-area: is a property that we can set a value after specifically naming a value with grid-template-area
 
-- nowrap has no hyphens ?. setting a flex-wrap to nowrap does not have a very responsonsive layout as the elements in the container will not wrap around the width if the page window gets changed. One way to fix this is applying a wrap value. It will move all the elements relative to the minimum width of the parent container to a now row
+- nowrap has no hyphens ?. setting a flex-wrap to nowrap does not have a very responsive layout as the elements in the container will not wrap around the width if the page window gets changed. One way to fix this is applying a wrap value. It will move all the elements relative to the minimum width of the parent container to a now row
 
-- flex-wrap: reverse will reverse the order of the elements in reverse automatically as opposed to setting a manual flex order. The higher the flex order number, the less priorty it has over the other elements with a lower order number. A zero is set to default and negative numbers can also be used to priortize an item to be first
+- flex-wrap: reverse will reverse the order of the elements in reverse automatically as opposed to setting a manual flex order. The higher the flex order number, the less priority it has over the other elements with a lower order number. A zero is set to default and negative numbers can also be used to prioritize an item to be first
 
 - Justify content: Property that is set on the parent container (flex container) that distributes the items inside a container along the main axis.
 
 - space-between creates spaces between the elements but does not create a margin for the first and last items. space-around creates spaces around all elements but does not leave an equal space between the first and last element. Space-evenly will create even spaces between all elements
 
-- Align items is similar to justify content however the axis is align on the cross axis, which would be horizontal in a defaul flex display layout. A height will also need to be applied to see the changes (if set to row). A common value would set to a 100% or a vh (viewport height) which is the height of the window that youre viewing the page .
+- Align items is similar to justify content however the axis is align on the cross axis, which would be horizontal in a default flex display layout. A height will also need to be applied to see the changes (if set to row). A common value would set to a 100% or a vh (viewport height) which is the height of the window that youre viewing the page .
 
 - Vh: if setting a 70vh container , it would set an approximate 2/3 of the page or close to around 66.66% of the page
 

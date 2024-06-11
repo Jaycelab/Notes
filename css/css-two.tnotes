@@ -1,5 +1,5 @@
 CSS Selectors:
-selector > selector: You can seleect a child selector directly below above (1 generation deep) from a parent selector. This will only work if its a direct child
+selector > selector: You can select a child selector directly below above (1 generation deep) from a parent selector. This will only work if its a direct child
 **Rather than selecting "div" use class name > element (or class) instead
 
 - descendant = apply to a descendent of left side. This can be a non-direct child of a parent as long as a class is present on the left side of the property. For example, you can select a class 1 > class 2 > p
@@ -17,7 +17,7 @@ https://appbrewery.github.io/css-positioning/ -->
 
 - Relative: This is the most commonly used position. The position is relative to it's default position. For example a default static position has a default position and when a relative position is applied, the position values are applied relative to the static position. In simpler terms, relative position takes the static position and applies positioning
 
-- Absolute: Position relative to neart positioned ancestor or top left corner of webpage. Basically, if an element has a set relative position, and we apply an absolute position, the absolute position becomes relative to that container instead (whichever is closest) However, if are no nearby elements than it defaults to the top left corner of the web page. Any new position thats applied with a RELATIVE property on a near container will also take into effect.
+- Absolute: Position relative to near positioned ancestor or top left corner of webpage. Basically, if an element has a set relative position, and we apply an absolute position, the absolute position becomes relative to that container instead (whichever is closest) However, if are no nearby elements than it defaults to the top left corner of the web page. Any new position thats applied with a RELATIVE property on a near container will also take into effect.
 
 - Z-index (or zed index): This determines which elements are displayed on the screen. All elements are shown equally with a default property of 0. The higher the number, the more importance it has and will be displayed in a higher importance as opposed to a negative value, which will instead push it behind. The z index is what's calculated between the x and y axis.
 
@@ -30,12 +30,12 @@ REMEMBER TO USE TOP, LEFT, RIGHT ETC INSTEAD OF MARGIN!!
 
 - Float: Can be applied to both left and right sides targeting images, paragraphs, headings, etc. Clear is commonly used on the footer to wrap around the containers with values commonly set to both or left/right. 
 
-- Responsive Webstie: There are 4 primary methods of applying responsiveness to a website. They are: 
+- Responsive Website: There are 4 primary methods of applying responsiveness to a website. They are: 
 
 * Media Queries
 * CSS Grid 
 * CSS Flexbox 
-* External Framworks eg Tailwind, Bootstrap , SASS
+* External Frameworks eg Tailwind, Bootstrap , SASS
 
 - A display of block will take up an entire full width. For example, a container with a block display will not take up the same space but will instead create a new line
 
@@ -45,7 +45,7 @@ REMEMBER TO USE TOP, LEFT, RIGHT ETC INSTEAD OF MARGIN!!
 
 - Float: Wraps around another element. For example, we can wrap an image around a paragraph by setting a float:left (or right)
 
-- Media Query: Instead of a selector, a @media is used with a breakpoint within paranthesis () then followed my general styling. Examples of a break point can be a mix-width, max-width, min-height, max height etc. The CSS styling is wrapped around a seperate set of curly braces. Setting a max-width: 600px will apply the given values once the width of the page reaches below the 600px breakpoint. However, a min-width with a 600px will apply the opposite since the values are applied once it reaches over 600px. In context, a max-width is in the direction of LEFT and the mix-width is in the direction of RIGHT. Example below:
+- Media Query: Instead of a selector, a @media is used with a breakpoint within parenthesis () then followed my general styling. Examples of a break point can be a mix-width, max-width, min-height, max height etc. The CSS styling is wrapped around a separate set of curly braces. Setting a max-width: 600px will apply the given values once the width of the page reaches below the 600px breakpoint. However, a min-width with a 600px will apply the opposite since the values are applied once it reaches over 600px. In context, a max-width is in the direction of LEFT and the mix-width is in the direction of RIGHT. Example below:
 
   @media (max-width: 600px) {
   div {
@@ -56,9 +56,9 @@ REMEMBER TO USE TOP, LEFT, RIGHT ETC INSTEAD OF MARGIN!!
 
 - You can also combine breakpoints by using and in between. For example (min-width: 600px) and (max-width: 900px) Essentially this means that the given value will be applied once the page reaches over 600px and below 900px.
 
-- You can also reverse this concept by first applying the max width property , using AND to separate and then follow with a min-width. This means that the styles will be applied for screens less than 600px and greater than 900px (bascailly a certain range within the page width will only become standard styling )
+- You can also reverse this concept by first applying the max width property , using AND to separate and then follow with a min-width. This means that the styles will be applied for screens less than 600px and greater than 900px (basically a certain range within the page width will only become standard styling )
 
-@media screen may also be used but not neccesarily as the default screen orientation is set to landscape. Another value commonly used is Print which will apply display changes once the page is set to print
+@media screen may also be used but not necessarily as the default screen orientation is set to landscape. Another value commonly used is Print which will apply display changes once the page is set to print
 (\*\*\*Check MDN for more features and selectors)
 
 

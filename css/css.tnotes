@@ -7,7 +7,7 @@
 - 1pt (point) is qual to 1/72nd inch (0.35 mm)
 - 1em (full width of M, 100% of parent) . For example, if setting a h1 tag with a 1em property and is enclosed between a body with a 20px width, the h1 would take up 100% of that parent value , or 20px. If setting the value to 2rem, then it would double the width to 40px. It is relative size of the parent container
 - 1rem (r means relative) and is instead relative to the entire root of the page
-- The difference is that rem is a more consistent way of changing the font size and is recomennded rather than using em. This is because setting multiple em values will create an uneven font size through the entire page 
+- The difference is that rem is a more consistent way of changing the font size and is recommended rather than using em. This is because setting multiple em values will create an uneven font size through the entire page 
 
 - border has 3 properties. The thickness, the style and the color. The border goes outwards rather than inwards. Once you setup a general border, you can also next a new border (eg. border-top) to further change the overall border.  For example, with a 30px overall border, you can change the border-top to 0px to append the top portion of the border.
 
@@ -79,7 +79,7 @@ Responsive Portfolio Tips:
 - Justify content is primarily used for rows and align-self for columns.
 - Justify aligns the flexible content on the main axis
 - Common measurements for absolute units is pixels (px) and centimeters (cm)
-- Common measurements for realative values is percentage, em, vh, vw, and rem.
+- Common measurements for relative values is percentage, em, vh, vw, and rem.
 #FLEXBOX IS SINGLE DIMENSIONAL# 
 - Row has a horizontal main axis and vertical cross axis. When column, the values are opposite
 
@@ -209,5 +209,5 @@ order:position in flex /* Set ascending by default */
 align-self:  start | center | end | stretch
 
 - repeat (num, fr) is used to write a short hand grid-template row/columns for grid display
-- grid-column: (1/ span 12) *this means that it was begin on the first column and span out twlce columns*
+- grid-column: (1/ span 12) *this means that it was begin on the first column and span out twice columns*
 
