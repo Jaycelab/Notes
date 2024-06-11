@@ -1,6 +1,6 @@
 # Notes
 
-This repository is for storing and organizing my personal notes
+This repository is for storing and organizing my personal notes that I have taken throughout the years
 
 ## Table of Contents
 
