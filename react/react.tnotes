@@ -1,5 +1,5 @@
 RenderDOM.react(<h1></h1>, document.getElementById(""))
-// RednerDOM is a global variable, .react is an included method. First paramenter is what you want to place on the screen.
+// RednerDOM is a global variable, .react is an included method. First parameter is what you want to place on the screen.
 // First parameter is what you want to place on the screen, second parameter is where you want to place it 
 
 - React combines small amounts of files into single components so that each component has it's own styling and own functionality that it controls that can perform different functions and have different appearances.
@@ -13,13 +13,13 @@ RenderDOM.react(<h1></h1>, document.getElementById(""))
 2. Where to show it 
 3. (optional) When render has started 
 
-- JSX - When the HTML that gets picked up by a compiler and converted (compiled down) to actual Javascript. The compilier is included with the require("react") module
+- JSX - When the HTML that gets picked up by a compiler and converted (compiled down) to actual Javascript. The compiler is included with the require("react") module
 
-- Babel : Javascript compilier that converts plain JS that is compatabile for every browser to read and render. 
+- Babel : Javascript compiler that converts plain JS that is compatible for every browser to read and render. 
 
 - The HTML thats inputted into the JS file is converted by running the HTML tags through the react module which then converts and compiles it down to Babel for universal usage across all browsers 
 
-- This essentialy cuts down the amount of time to write a simple code as shown below 
+- This essentially cuts down the amount of time to write a simple code as shown below 
 
 let h1 = document.createElement("h1");
 h1.innerHTML = "Hello World!";
@@ -29,9 +29,9 @@ VS
 
 ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));
 
-- The new method for importing the REACT module now consists of using the keyword "import" and "export" rather than assining a valuable 
+- The new method for importing the REACT module now consists of using the keyword "import" and "export" rather than assigning a valuable 
 
-- When using render, you can combine multipel HTML elements by wrapping the elements inside a div container. Any additional elements added will automatically be rendered as a single HTML component
+- When using render, you can combine multiple HTML elements by wrapping the elements inside a div container. Any additional elements added will automatically be rendered as a single HTML component
 
 - JSX gives the ability to inserts HTML inside a JS file and then insert Javascript inside the inner html. 
 
@@ -47,11 +47,11 @@ ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));
 
 1. export default 'function name'
 2. export function name OR
-export {function, function} (if mulitple functions)
+export {function, function} (if multiple functions)
 
 - Importing an export using default
 
-import functionname from "./xx ";
+import function name from "./xx ";
 eg. import addTwo from "./addTwo"
 (export default addTwo)
 *** You would type the keyword from followed by location of the file WITHOUT the js.extension
@@ -75,12 +75,12 @@ without the comments which creates a React object, which is createElement() meth
 
 
 - 1st argument is for WHAT the DOM is to render.
-- 2nd argument is any HTML arugument that should be added. 
-- 3rd property is the contents of the innerHTML of the DOM elment specified as the first argument. So in this case , it will be the contents of the innherHTML of the 'h1' element.
+- 2nd argument is any HTML argument that should be added. 
+- 3rd property is the contents of the innerHTML of the DOM element specified as the first argument. So in this case , it will be the contents of the innherHTML of the 'h1' element.
 
 - Javascript functions can be used as a component in React 
 
-- Return statements can be spread over multiple lines by surrounding the code that follows the return keyword with an opening and closing paranthesis 
+- Return statements can be spread over multiple lines by surrounding the code that follows the return keyword with an opening and closing parenthesis 
 
 - function Example () {
 	return (<h1>Example</h1>)

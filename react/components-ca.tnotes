@@ -1,16 +1,16 @@
-- A component is a small, resuable chuck of code that is reponsiblefor rending some HTML and re-rendering it when data changes. 
+- A component is a small, reusable chuck of code that is responsible for rending some HTML and re-rendering it when data changes. 
 
 *REVIEW*
 </ func name> as opposed to curly brackets {}. {} only when assigned variables?
 
 - ReactDOM import is typically imported from 'react-dom/client'. Be sure to not forget to add /client. The methods imported from 'react-dom' interacts with the DOM. Methods imported from 'react' do NOT interact with the DOM at all and does not engage directly with anything that isn't part of React
  
-*The DOM is techincally used in React apps, however it is not a part of REACT. Methods imported from 'react' are only for pure React purposes such as creating components or writing JSX elements.
+*The DOM is technically used in React apps, however it is not a part of REACT. Methods imported from 'react' are only for pure React purposes such as creating components or writing JSX elements.
 
 //import React from 'react;
 // import ReactDOM from 'react-dom/client'
 
-- Adding a parathensis () within an div element is OPITIONAL . It is not strictly required
+- Adding a parenthesis () within an div element is OPTIONAL . It is not strictly required
 - Components can be thought of as reusable chunks of Javascript functions that take some kind of input and return a React element.
 - Functional components === Javascript functions
 
@@ -19,13 +19,13 @@
 - Comments in JSX is similar to Javascript however they also need to be wrapped in curly brackets. {/* This is a JSX comment*/}
 
 - In the past, React components were defined using Javascript classes but has now been replaced with Hooks. 
-- Functional component names must begin with a capital unlike Javascript where camelCase is used. This style is called PascalCase and is how JSX tags are compiled. Capitalization indicates that is is a React comonent rather than an HTML tag
+- Functional component names must begin with a capital unlike Javascript where camelCase is used. This style is called PascalCase and is how JSX tags are compiled. Capitalization indicates that is is a React comment rather than an HTML tag
 
 - import React from 'react'; === Creates a Javascript object that contains properties needed to make React function such as React.createElement();
 
 - import ReactDOM from 'react-dom/client' creates another Javascript object. This object contains methods that help React interact with the DOM, such as ReactDOM.create();
 
-- render method is the only method that must always be declased inside a component.
+- render method is the only method that must always be declared inside a component.
 However, you do not always have to return an element inside the render() method and instead can return a Boolean or a null value
 
 - React typically has two core files: App.js and index.js. App.js is the top level of the application and index.js is the entry point
@@ -33,10 +33,10 @@ However, you do not always have to return an element inside the render() method 
 - When importing a component be sure to always exclude the file name and add ./ before the function name.
 
 *Steps for rendering:*
-1. call createRoot() method to create a React root container for displaying conent. React apps typically have a single root DOM node, and everything inside is managed by React DOM. In other words, we give createRoot a DOM element to render in such as .getElementById or querySelector and React will take over managing the DOM inside it.
+1. call createRoot() method to create a React root container for displaying content. React apps typically have a single root DOM node, and everything inside is managed by React DOM. In other words, we give createRoot a DOM element to render in such as .getElementById or querySelector and React will take over managing the DOM inside it.
 2
 
-- Owl comonent object example:
+- Owl component object example:
  
 import React from 'react';
 
@@ -82,7 +82,7 @@ export default Promo;
 **JavaScript Expression Syntax**
 <h1 style ={}>
 
-- The code aboves means that whatever code you add inside these opening and closing curly braces is to be parased as regular JavaScript. 
+- The code aboves means that whatever code you add inside these opening and closing curly braces is to be parsed as regular JavaScript. 
 
 - The double curly bracket example is called a "style object literal". Another way of writing this is 
 
@@ -100,7 +100,7 @@ export default Promo;
 
 - Besides inlining a style object literal, you can also save it inside a variable and then use the variable instead of passing an object literal. 
 
-- Remember to declare a variable BEFORE a return statment as show below:
+- Remember to declare a variable BEFORE a return statement as show below:
 
 function Promo() {
 
@@ -125,7 +125,7 @@ q		</div>
 
 - This approach of declaring a variable and assigning styling makes the components more self-contained because they come with their own styles built-in; however it also makes them a bit harder to maintain? **review
 
-- When applying CSS to JavaScript, you would need to first declare a variable to the property name , remove any hyphens, convert any numbers or non-number values to strings, and write the variable using pacscalCase. Example component below utilizing CSS in a JSX expression:
+- When applying CSS to JavaScript, you would need to first declare a variable to the property name , remove any hyphens, convert any numbers or non-number values to strings, and write the variable using pascalCase. Example component below utilizing CSS in a JSX expression:
 
 function Sidebar() {
 	const asideStyle = {
@@ -143,7 +143,7 @@ function Sidebar() {
 	)
 };
 
-*Components as Fuction Expressions*
+*Components as Function Expressions*
 
 - Function Declaration as a component in React
 
@@ -165,7 +165,7 @@ const Nav = function (props){
 	)
 }
 
-- The above 2 expressions are similar however it is now using an anonymous (nameless) function by assinging it to a variable using the const keyword. 
+- The above 2 expressions are similar however it is now using an anonymous (nameless) function by assigning it to a variable using the const keyword. 
 - Changing a component from a function declaration to a function expression doesn't change it's behavior or how the Nav component is rendered.
 
 * Function declaration using arrow functions (=>)*
@@ -183,7 +183,7 @@ cost Nav = (props) => {
 
 }
 
-- Above example elimates the need to write function while still declaring a const variable
+- Above example eliminates the need to write function while still declaring a const variable
 - The arrow itself can be thought of as the replacement for the function keyword
 - The parameters that this arrow function accepts are listed before the arrow itself
 
@@ -195,7 +195,7 @@ const example = function() {};
 ES6
 const example = () => {} // the parameters is before the arrow, thus accepting any arguments before the arrow itself
 
-- Another key point in using arrow functions is that the paranthesis is optional if only a single parameter is accepted. So to simplify, the shorter version to write the above code example would be:
+- Another key point in using arrow functions is that the parenthesis is optional if only a single parameter is accepted. So to simplify, the shorter version to write the above code example would be:
 
 const Nav = props => 
 
@@ -217,7 +217,7 @@ ES5 Version:
 	};
 )
 
-// forEach() method accepts a single parameter: an anoynymous function. If you write this anonymous function in ES5 syntax, then it would contain a return statement:
+// forEach() method accepts a single parameter: an anonymous function. If you write this anonymous function in ES5 syntax, then it would contain a return statement:
 
 ES5 Version:
 function(item){
@@ -233,12 +233,12 @@ item => item * 10
 
 num => num * 20;
 
-- Both these functions perform the same tasks, however the syntax is different. The ES6 version is much shorter becase:
-1. The arrow function has a single parameter, so paranthese is not required around the item parameter (left of the arrow)
+- Both these functions perform the same tasks, however the syntax is different. The ES6 version is much shorter because:
+1. The arrow function has a single parameter, so parentheses is not required around the item parameter (left of the arrow)
 2. Since the arrow function fits on one line of code, you don't need to use curly braces around the function body or the return keyword as it is IMPLICIT
 
 * Embedded Expressions*
-- Allows Javascript values to be insereted into HTML of React elements. Example:
+- Allows Javascript values to be inserted into HTML of React elements. Example:
 
 function formateName(firstName, surname) {
 	

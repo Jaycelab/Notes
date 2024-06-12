@@ -1,7 +1,7 @@
 *CONDITIONALS*
 - Conditional execution controls if a certain block of code will be executed or not based upon the truthy/falsy value of a condition
-- Conditionals govern and control the flow of execution of statments based on a set of conditions and the decisions taken thereof.
-- Applications is not a lineere set of sequence, instead it jumps to different hoops to get a results based on a set of factors
+- Conditionals govern and control the flow of execution of statements based on a set of conditions and the decisions taken thereof.
+- Applications is not a linear set of sequence, instead it jumps to different hoops to get a results based on a set of factors
 - There are a total of 6 conditional statements in Javascript:
 if-else
 switch
@@ -21,27 +21,27 @@ if(expression) {
 }
 
 *Nullish Coalescing Operator*
-- ?? is used to evalute an opperand as it's true value rather than a boolean value. Example, 0 will evaluate as integer 0 rather than false.
+- ?? is used to evaluate an operand as it's true value rather than a boolean value. Example, 0 will evaluate as integer 0 rather than false.
 - Logical OR returns the first truthy value while nullish coalescing returns the first defined value.
 - null value or unavailable value will skip to the next evaluation
 
 *Optional Chaining Operator*
-- If an property value is not assigned, a TypeError will occur. An optional chaining operator will return undefined rather than an error. The part on the right will not evaulate
+- If an property value is not assigned, a TypeError will occur. An optional chaining operator will return undefined rather than an error. The part on the right will not evaluate
 - This is use for adding a custom message by combining a nullish coalescing to display a console.log message as well
 - This also works with arrays and the index of the element or key/value.
 
 
 *Switch Statements*
 -  Evaluates an expression and uses the outcome of that expression to match against a set og given conditions known as cases
-- break keyword is used to stop ethe execution and step out of the switch statement
+- break keyword is used to stop either execution and step out of the switch statement
 - default case is executed when no case code is matched 
 
 
 *ARRAYS*
 - Array Prototype . All objects inherit from a parent template known as prototype
-- Protoype defines the methods and properties that should be vailable to all objects of that type.
-- Similar to a prototype from a car. Differents prototypes are used to be perfected, tested, designed etc. Each prototype has different properties that meet requirements per each country but ultimately it is all derived from the initial first prototype
+- Prototype defines the methods and properties that should be available to all objects of that type.
+- Similar to a prototype from a car. Different prototypes are used to be perfected, tested, designed etc. Each prototype has different properties that meet requirements per each country but ultimately it is all derived from the initial first prototype
 
-- Accesor Methods: Accesses the array without modifications but returns the new modified array. Eg concat, filter, slice etc
-- Interation Methods: Iterate, process elements and return a new array with the processed elements. It is used to traverse the array and dynamically access elements of that array 
+- Accessor Methods: Accesses the array without modifications but returns the new modified array. Eg concat, filter, slice etc
+- Iteration Methods: Iterate, process elements and return a new array with the processed elements. It is used to traverse the array and dynamically access elements of that array 
 - Mutator Methods: Modify (mutate) the original array. Eg. push, pop, shift, sort, etc 

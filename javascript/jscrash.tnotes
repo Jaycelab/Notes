@@ -5,4 +5,4 @@ padStart - Adds additional characters relative to the first input parameter numb
 padEnd - Similar but adds to end 
 trim = removes whitespace
 trimStart/trimEnd = Trim only beginning and end 
-split - splits the delimiter from a string (example, commma from a string)
+split - splits the delimiter from a string (example, comma from a string)

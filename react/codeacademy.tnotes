@@ -10,7 +10,7 @@
 4. Changes on the real DOM is reflected on the screen in real time, hence the changes 'reacts'
 
 - Deconstructing arrays can be set by first assigning a variable to an object (key value pairs)
-Followed by a bracket wrapped variable(s) asigned to original variable
+Followed by a bracket wrapped variable(s) assigned to original variable
 
 *Function Deconstructing*
 let truck = {
@@ -80,11 +80,11 @@ const owlCat = (
 ); 
 
 *Event Listener*
-- An event listerners attribute's name should be sometihng similar to onClick or onMouseOver. The word 'on' plus the type of event that you are listening for. Refer to https://react.dev/reference/react-dom/components/common for common event listener names 
+- An event listeners attribute's name should be something similar to onClick or onMouseOver. The word 'on' plus the type of event that you are listening for. Refer to https://react.dev/reference/react-dom/components/common for common event listener names 
 
-- An event listerners attribute value should be a function. The above example above would only work if the name were a valid function that had been defined somewhere else
+- An event listeners attribute value should be a function. The above example above would only work if the name were a valid function that had been defined somewhere else
 
-- Event listeners in HTML is written in all lower case, however in JSX event listerners are written similar to Javascript or camelCase, in this case onClick or onMouseOver. Example of an image onClick event listener below: 
+- Event listeners in HTML is written in all lower case, however in JSX event listeners are written similar to Javascript or camelCase, in this case onClick or onMouseOver. Example of an image onClick event listener below: 
 
 const kitty = (
   <img onClick={makeDoggy}
@@ -110,14 +110,14 @@ if (user.age >= drinkingAge) {
   );
 }
 
-Excercise example below using expression with img element
+Exercise example below using expression with img element
 
 if (coinToss() === "headers") {
   
-  ///onbject, key-value
+  ///object, key-value
   img = <img src = {pics.kitty} />
 } else {
-  img = </img sec ={pics.odoggy} />
+  img = </img sec ={pics.doggy} />
 };
 
 
@@ -190,7 +190,7 @@ ReactDOM.render(myList, document.getElementById('app'));
  
 - A key is a JSX attribute. The attribute’s name is key. The attribute’s value should be something unique, similar to an id attribute.
 
-- Keys do not do anything. React uses them internally to keep track of lists. If you don't use keys when you're supposed to, React might accidetally scramble your list items into the wrong order.
+- Keys do not do anything. React uses them internally to keep track of lists. If you don't use keys when you're supposed to, React might accidentally scramble your list items into the wrong order.
 
 - Not all lists need to have keys. A list needs keys if either of the following is true:
 

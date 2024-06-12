@@ -53,7 +53,7 @@ const User = (props) => {
 	);
 };
 
-- When creating new components, creating different files for new components is recomennded. For example, we can create a User.js file for the user component
+- When creating new components, creating different files for new components is recommended. For example, we can create a User.js file for the user component
 
 - An export is required on the file that we will be exporting from
 Eg. export const User = (props) => {

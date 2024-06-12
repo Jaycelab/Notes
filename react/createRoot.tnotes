@@ -3,7 +3,7 @@
 changes include:
 1. import ReactDOM from 'react-dom/client'
 
-2. Previouly used was 
+2. Previously used was 
  ReactDOM.render(navbar, document.getElementById("root"))
  
 2a. NEW WAY OF WRITING 
@@ -27,7 +27,7 @@ root.render(jsx)
 //created two variables
 
 
-My Soulution:
+My Solution:
 ReactDOM.createRoot(document.getElementById('main')).render(main)
 
 Correct Solution:

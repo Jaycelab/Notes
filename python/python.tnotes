@@ -1,27 +1,27 @@
-- To apply comments, the hashtag sybol is used. Any text to the right of the symbol is commented out(#)
+- To apply comments, the hashtag symbol is used. Any text to the right of the symbol is commented out(#)
 - For bulk comments, """example text """ . (two pairs of 3 quotes on left and right)
 - Python does not use curly brackets for executing expressions, instead it uses indentation 
 
 - The first line of python code cannot have indentation
 - Indentation is mandatory in python to define the blocks of statements
 - The number of spaces must be uniform in a block of code
-- It is preferred to use whitespaces instead of tabs to indent in python
+- It is preferred to use whitespace instead of tabs to indent in python
 
 *Python order* 
 
 *Tokens*
 Keywords
-Python keywords are special reservered words
+Python keywords are special reserved words
 Conveys a special meaning to the compiler/interpreter
 
 
-- Identifier is used to assigna variable.
+- Identifier is used to assigns variable.
 
 - Single quotes are usually used for single characters
-- Double quotes are usually used for sentenaces
-- Tripe quotes are mainly used for multilined paragraphs 
+- Double quotes are usually used for sentences
+- Tripe quotes are mainly used for multiline paragraphs 
 
-*Class Excercises*
+*Class Exercises*
 - String Literal
 print("Hello World")
 age=input("Enter your age: ")
@@ -42,7 +42,7 @@ From Mondays-Fridays"""
 
 print(single,double,triple)
 
-- Numberical Literal
+- Numerical Literal
 #10,100,200,300
 a=0b1010
 b=100
@@ -92,9 +92,9 @@ else:
     print(food)
 
 *Operators*
-- Arthimetic Operators
+- Arithmetic Operators
 
-*KM to Miles excercise*
+*KM to Miles exercise*
 kilometer = int(input("Kilometer distance: "))
 
 one_mile = 0.621
@@ -167,7 +167,7 @@ for i in range(0,101,10):
 print("**********")
 print("End of loop")
 
-*Prime Number Excercise*
+*Prime Number Exercise*
 
 num = int(input())
 
@@ -185,8 +185,8 @@ else:
 	print("True")
 	
 
-- Break will end the condition and revert to beginning of statement . Skips interation
-- Continue will skip the interation if the condition is True
+- Break will end the condition and revert to beginning of statement . Skips iteration
+- Continue will skip the iteration if the condition is True
 - Pass will ignore any errors and continue
 
  lis_vals=[]
@@ -194,13 +194,13 @@ else:
  
  -Length property is used to dynamically check the number of elements in an array
  Keyword is len.
- - Count returns the number of occurences of an element 
+ - Count returns the number of occurrences of an element 
  
  - Lists is a mutable data type. Able to modify, increase ,decrease etc
  
  - SLice can also be written with colon :
  
- *Slicing Excercise*
+ *Slicing Exercise*
  
  #input
  num = input()
@@ -213,9 +213,9 @@ else:
  print(new_num[first:])
  
  #output
- #splut one list into 2
+ #split one list into 2
  
- -map() returns a map object, It takes two parameteres(var, iterable)
+ -map() returns a map object, It takes two parameters(var, iterable)
  
 lis_nums =[1,2,3,4,5,6]
 
@@ -230,11 +230,11 @@ print(list_sq)
 #creates a new list and assinging the result by appending lis_nums to lis_sq
 
 #Approach #2
-#Expression apprach
+#Expression approach
 lis_sq1 =[i**2 for i in lis]
 print(lis_sq1)
 
-- The above is evaulated using lis_new = [expression for i in interable]
+- The above is evaluated using lis_new = [expression for i in iterable]
 
 lis_even = [i for i in lis_nums if i % 2 == 0]
 
@@ -340,7 +340,7 @@ print(dic)
 - defined by keyword = def
 - can be defined or predefined, predetermined . Example below;
 
-*Function Delcartion Example*
+*Function Declaration Example*
 def greet():
 	print("Greet called")
 

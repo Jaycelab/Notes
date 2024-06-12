@@ -7,17 +7,17 @@ person.lastName = "Alvarado" , person.location = ['Orange County', 'Earth']
 *Functions* 
 - Block of code that performs a specific task and can be declared and used multiple times.
 - Makes the program easier as each small task is divided into a function
-- function accepets paramters (if any)
+- function accepts parameters (if any)
 - DRY, don't repeat your self. KISS, keep is simple stupid (or stupid simple)
 - Some terms of executing a function can be to call, run, execute, invoke, etc
-- Params are optional, however it is used when executing a command inside the fuction.
-- Parems are also called local variables, and is only available within the local scope of the function
+- parameters are optional, however it is used when executing a command inside the function.
+- parameters are also called local variables, and is only available within the local scope of the function
 - Arguments is what is being passed when invoking a function and adding values inside the parenthesis
 - return keywords executes and returns an expression within a local scope of a function that will execute when being called
 
 - Declaration vs expression. Expression is assigning a function to a variable first . Declaration can be called outside the scope or before the function , however an expression will give an error if calling the function before
 - Callback function is calling a function and using another function as an argument of a function.
-You can either create a new callback function and pass it as an argument using the function name. OR you can add the entire callback as an argument when calling the functioncdc
+You can either create a new callback function and pass it as an argument using the function name. OR you can add the entire callback as an argument when calling the function
 
 *JSON*
 - JSON.stringify will return an object into a json file
@@ -26,7 +26,7 @@ You can either create a new callback function and pass it as an argument using t
 *Dates*
 //using date constructor
 
-//year, month, day, hours, minutes, seconds , miliseconds
+//year, month, day, hours, minutes, seconds , milliseconds
 
 const currentDate = new Date(2023, 12, 10, 12, 34, 23, 0):
 console.log(currentDate)

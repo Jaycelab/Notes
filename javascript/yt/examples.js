@@ -52,7 +52,7 @@ greet("Jason", function cb() {
   console.log("I am a callback function");
 });
 
-//*Callback Excercise*
+//*Callback Exercise*
 
 function showCallFunc(fn) {
   const num = 10;

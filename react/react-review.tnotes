@@ -2,14 +2,14 @@
 
 - import ReactDOM from 'react-dom/client' creates another Javascript object. This object contains methods that help React interact with the DOM, such as ReactDOM.create();
 
-- functional components should be written in PascalCase. Similar to Javascript, components require curly brackets inside the body for JSX to be displayed. This essential will act as aset of instructions, explain how it should build a React component
+- functional components should be written in PascalCase. Similar to Javascript, components require curly brackets inside the body for JSX to be displayed. This essential will act as asset of instructions, explain how it should build a React component
 
 *createRoot()*
 - document.getElementById('app)' returns a DOM element from index.html
 - createRoot() receives the DOM element as the first argument and creates a root for it
 - createRoot() returns a reference to the root container on which you can call methods like .render()
 
-- After the root is created, all that's left to do is call the .render() method on the returned root and display the React component. From here, React will display the component </component> in the root and make it appear on the screeen. IN an application full built with React, you will only need to do this once. Once setup, React will manage the DOM of you application along with any updates to the UI.
+- After the root is created, all that's left to do is call the .render() method on the returned root and display the React component. From here, React will display the component </component> in the root and make it appear on the screen. IN an application full built with React, you will only need to do this once. Once setup, React will manage the DOM of you application along with any updates to the UI.
 
 - Adding more components should take place in your top-level App.js file 
 
@@ -17,11 +17,11 @@
 
 *REVIEW*
 - React applications are made up of components
-- Components are responsibile for rendering pieces of the user interface
+- Components are responsible for rendering pieces of the user interface
 - To create components and render them, react and reactDOM must be imported
 - React components can be defined with JS functions to make function components
-- Function component names must start with a capatalized letter and PascalCase 
+- Function component names must start with a capitalized letter and PascalCase 
 - Function components must return some React elements in JSX syntax
 - React components can be exported and imported from file to file
-- React components can be used by calling the componentt and wrapping them inside a self closing tag
+- React components can be used by calling the component and wrapping them inside a self closing tag
 - Rendering a component requires using .createRoot() to specify a root container (eg. document.getElementById) and calling .render() method on it (eg. <Container/>)

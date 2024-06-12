@@ -2,8 +2,8 @@ complex (or composite) data types:
 may consist of multiple elements, primitive and composite
 
 let counter = 100;
-let counte = 200;
+let counter = 200;
 counter = 300;
 
-aray push. PUSHES to end of array
-dog, cat, hamster cnary
+array push. PUSHES to end of array
+dog, cat, hamster 

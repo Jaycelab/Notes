@@ -92,4 +92,4 @@ JSON.stringify(data);
 
 - JSON is unable to hold functions and does not allow the use of JS comments 
 - Methods will be excluded from a stringy operation
-- Retreiving data from APIs and converting the JSON strings to JS objects is a standard practice
+- Retrieving data from APIs and converting the JSON strings to JS objects is a standard practice

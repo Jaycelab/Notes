@@ -1,4 +1,4 @@
-//Array Protype
+//Array Prototype
 
 - creating a new date object that inherits its properties from a data prototype
 const day = new Date().getDay();
@@ -10,11 +10,11 @@ const day = new Date().getDay();
 - Arrays is all part of the Array.prototype, which provides Javascript with many methods that can be used while working with arrays
 
 - There are 3 built in methods for the Array.prototype that can be accessed. They are the following:
-1. Accesor Methods - Acces the array without modifying it
+1. Accessor Methods - Access the array without modifying it
 2. Iteration Methods - Iterate, process elements and return a new array with the processed elements
 3. Mutator Methods - Modify (mutate) the original array
 
-- Array accessor methods are the methods which access the original array without modifying the original array and return the new modified array. For eg, concat, filter, slice etc
+- Array accessor methods are the methods which access the original array without modifying the original array and return the new modified array. For eg, concatenate, filter, slice etc
 
 - Mutator methods are the ones that modify the array. For eg, push, pop, shift, sort etc
 

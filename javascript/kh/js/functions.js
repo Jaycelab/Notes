@@ -1,4 +1,4 @@
-' use strict'
+" use strict";
 // Advanced JS Practice
 /*
 const personDate = [
@@ -23,7 +23,7 @@ const person = {
 		 currentDate = new Date();
 		 currentYear = currentDate.getFullYear();
 		//adding this. will reference the above key property in the object
-		//console logging this only will print the entire ojbect (person)
+		//console logging this only will print the entire object (person)
 		console.log(currentYear	- this.birthYear	)
 		//. This will return the statement, and not the
 		//result ------  console.log(`${currentYear}	 - ${birthYear}	`)
@@ -32,7 +32,7 @@ const person = {
 }
 
 // ES6 introduces new features that removes the need of adding the keyword 
-//function inside a statement along with the paremeter as long it is referenced
+//function inside a statement along with the parameter as long it is referenced
 // let and const can also be removed when declaring a variable 
 //: will also need to be removed when applying these changes
 
@@ -65,7 +65,7 @@ const calculator = function (num1,typeOfCalc) {
 	return typeOfCalc(num1) //pass another 2 parameters with the previous parameter outside scope
 }
 
-//shorthand arrow function with 1 parameter. Removing both parenths and curly brackerts () {}
+//shorthand arrow function with 1 parameter. Removing both parenthesis and curly brackets () {}
 sqRoot = a => a * a;
 //this also works when returning or console log.
 ``
@@ -79,7 +79,7 @@ for (let i = 0; i < dumArr.length; i++) {
 	//to get arr element, we have to pass array index.(dumArr[i])
 	console.log(dumArr[i])
 
-	//interating through entire array and printing the element each time
+	//iterating through entire array and printing the element each time
 }
 
 //looping array backward
@@ -132,7 +132,7 @@ function calcDistance(p1, p2) {
 
 console.log(`Distance between point1 and point2 is ${calcDistance(point1,point2)}`)
 
-//excercise
+//exercise
 
 let tempInFahrenheit = 77;
 
@@ -151,39 +151,29 @@ function toCelcius (fahrenheit) {
 */
 //Function Expressions. fname only accessible before calling
 const getDay = function () {
-	const days = [
-		"sun",
-		'mon',
-		'tues',
-		'wed',
-		'thurs',
-		'fri',
-		'sat',
-		'sun'
-		];
-	//creates a new array with Date method and returns the index of current today. 
-	//based on index of element
-	const today = new Date().getDay();
-	return days[today]
+  const days = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat", "sun"];
+  //creates a new array with Date method and returns the index of current today.
+  //based on index of element
+  const today = new Date().getDay();
+  return days[today];
 };
 
-
-console.log(getDay())
+console.log(getDay());
 
 const convertTemp = function (temp, convertTo) {
-	let toUnit = convertTo ?? "F";
-	//if true, assign converTo or assign to "F"
-	let tempToConvert = Number(temp) ?? 0;
-	//if true , assign temp in Number. If false, assign 0
+  let toUnit = convertTo ?? "F";
+  //if true, assign converTo or assign to "F"
+  let tempToConvert = Number(temp) ?? 0;
+  //if true , assign temp in Number. If false, assign 0
 
-	if (toUnit === "F") {
-		let fahrenheit = (tempToConvert * 9) / 5 + 32;
-		return `${fahrenheit}\u{00B0}F`;
-		} else {
-			let celcius = ((tempToConvert - 32) * 5) / 9;
-			return `${celcius}\u{00B0}C`;
-		}
-}
+  if (toUnit === "F") {
+    let fahrenheit = (tempToConvert * 9) / 5 + 32;
+    return `${fahrenheit}\u{00B0}F`;
+  } else {
+    let celcius = ((tempToConvert - 32) * 5) / 9;
+    return `${celcius}\u{00B0}C`;
+  }
+};
 
 let today = 100;
-console.log(convertTemp(today, "C"))
+console.log(convertTemp(today, "C"));

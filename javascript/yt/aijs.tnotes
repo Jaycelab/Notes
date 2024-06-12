@@ -11,7 +11,7 @@ var.style.fontsize = "50px"
 
 //creating element 
 // first create element targeting element
-- const div = documnent.createElement("div") = Par1 = name of element 
+- const div = document.createElement("div") = Par1 = name of element 
 // second target body
 - const body = document.querySelector("body")
 // third append div to body element using appendChild
@@ -27,7 +27,7 @@ div.appendChild(p)
 
 // creating a new paragraph
 
-const parenDiv = dcoument.querySelector(".parent")
+const parenDiv = document.querySelector(".parent")
 const newPara = document.createElement("p")
 newPara.innerHTML = "This is my first paragraph about Code"
 
@@ -39,4 +39,4 @@ anotherPara.innerHTML = "This is a second paragraph"
 paraDiv.appendChild(newPara)
 
 //insertAdjacentElement (position,element) Check doc for more info. There are a total of 4 position options
-parentDiv.insertAdjacenetElement
+parentDiv.insertAdjacentElement

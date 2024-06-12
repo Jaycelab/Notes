@@ -2,7 +2,7 @@
 
 
 function lifeInWeeks(age) {
- 	// let omited but need to doublecheck if considered clean code
+ 	// let omitted but need to double check if considered clean code
  	yearsRemaining = 90 - age;
  	daysRemaining = yearsRemaining * 365;
  	weeksRemaining = yearsRemaining * 52;
@@ -104,7 +104,7 @@ let guestList = ["Jason", "Elmer", "Brian", "Abie"];
 let name = prompt("What is your name?");
 
 if (guestList.includes(name)) {
-  alert("Wecome to the Club!");
+  alert("Welcome to the Club!");
 } else {
   alert("You are not welcome");
 }

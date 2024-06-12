@@ -1,5 +1,5 @@
-- NPM is a  package mangement that is used to install, uninstall and update Javascript packages 
-- NPX is a package executer that is used o directly execute Javascript packges without installing them
+- NPM is a  package management that is used to install, uninstall and update Javascript packages 
+- NPX is a package executer that is used o directly execute Javascript packages without installing them
 
 
 function App() {
@@ -64,4 +64,4 @@ function App () {
 	)
 }
 
--- if statements can only be used outside the return statement, however using teneary satements is possible 
+-- if statements can only be used outside the return statement, however using ternary statements is possible 

@@ -41,7 +41,7 @@ export default App;
  
  // using object destructuring in the parameters {}
  // Target the different properties of the incoming object by name. The parameters will have to match the given properties set as props along with the 
- //key in the object . This will allow Javascript to assign the properties or parameters as standalone variarables inside the function allowing us to remove the word 
+ //key in the object . This will allow Javascript to assign the properties or parameters as standalone variables inside the function allowing us to remove the word 
  //props inside the variable. This applies to both methods shown below inside the CoreConcept components
  
 function CoreConcept({ image, title, description }) {
@@ -85,7 +85,7 @@ function App() {
 /*************************************************************************************/
 /*************************************************************************************/
 
-  More Prop Syntaxes
+ /* More Prop Syntaxes
 Beyond the various ways of setting and extracting props about which you learned in the previous lecture, there are even more ways of dealing with props.
 
 But no worries, you'll see all these different features & syntaxes in action throughout the course!
@@ -95,7 +95,7 @@ Passing a Single Prop Object
 If you got data that's already organized as a JavaScript object, you can pass that object as a single prop value instead of splitting it across multiple props.
 
 I.e., instead of
-
+*/
 <CoreConcept
   title={CORE_CONCEPTS[0].title}
   description={CORE_CONCEPTS[0].description}  
