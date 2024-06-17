@@ -1,0 +1,57 @@
+*STATE*
+- Define state of component input field by declaring a variable to track the value of the input field (list of groceries to be added)
+- Item state to empty string to track the input value
+- GroceryItems state to empty array to track the grocery items
+- Input container for input and button with value === item and onChange event to setItem will automatically changes state when the input value changes
+- isEditing state to false to track if the user is editing an item and newInput state to item.name to track the new input value with the display of the item object name
+
+*IF/ELSE STATE*
+- If isEditing is True, display the input field with the value of newItem. If false, display the item name only
+
+*UUID*
+- Passing an index is not necessary because we are using the unique id
+- uuid package to generate unique id
+
+*ADD*
+- HandleAddItem function to add the item to the groceryItems array
+- Spread operator can be used  to add the item to the groceryItems array
+- Adding items to the groceryItems array using uuid to generate a unique id
+- Passing the item to the GroceryItem component and decronstructing the item to get the id and item.== "Edit"
+
+*EDIT*
+- Edit logic using onClick event to set the setIsEditing state to true. The button will display if isEditing is true == "Save" and if false 
+- If isEditing is true, run onEdit function to edit the item. If false, set the isEditing state to true
+- onEdit function to check if value is empty and if not, set the item to the newInput value
+- HandleAddItem function accepts id and name as arguments to add the item to the groceryItems array object
+- handleEditItem will passed and deconstructed from the GroceryItemComponent
+- onEdit will be passed to the GroceryItem component to handle the edit logic and update newItem
+- handleEditItem function to update the item in the groceryItems array using map and spread operator to loop through the array and check if   the id matches the item id. If it does, update the item name to the newInput value
+- setIsEditing to false to reset the state to false after editing the item
+- setNewItem to empty string to reset the input field after editing the item
+
+*UPDATE*
+- setGroceryItems to the updated groceryItems array
+
+*DELETE*
+- filteredItems function to filter out the item to be deleted from the groceryItems array.
+- if itemId does not match the filtered grocery items, removes the item from the array
+- setGroceryItems to the filteredItems array
+- onDelete function to delete the item from the groceryItems array and passed as a prop to onedit function
+- GroceryItemComponent deconstructed onDelete from props and passed to the delete button onClick event
+
+*CLEAR*
+- Clear all items from the groceryItems array using the clearItems function if the groceryItems array is not empty
+- Will display the clear button if the groceryItems array is not empty and null if empty
+- clearItems function will set additem to empty string
+
+*ERROR*
+- -useRef to create a reference to the input field to focus on the input field when the page loads
+- returns a p tag with a message if the groceryItems array is empty. If not, returns null. setErrors is set to empty string once item has been added
+- onEdit ifsetatement to display error if item is empty. If not, setErrors to empty string
+
+*DEPLOYMENT*
+// github pages
+- npm install gh-pages --save-dev
+- base: "/<repo-name> /", inside defineConfig
+- "homepage": "https://<username>.github.io/<repo-name>/", as property
+- "predeploy": "npm run build", "deploy": "gh-pages -d dist", inside scripts
