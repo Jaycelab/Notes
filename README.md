@@ -15,6 +15,3 @@ This repository is for storing and organizing my personal notes that I have take
 - [React](./react/)
 - [Rust](./rust/)
 
-## Programming
-
-Notes related to various programming languages and concepts.
