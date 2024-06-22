@@ -1,6 +1,6 @@
 # Notes
 
-This repository is for storing and organizing my personal notes that I have taken throughout the years
+Collection my personal notes that I have taken throughout the years
 
 ## Table of Contents
 
@@ -11,7 +11,8 @@ This repository is for storing and organizing my personal notes that I have take
 - [DSA](./dsaa/)
 - [HTML](./html/)
 - [Javascript](./javascript/)
+- [JSON](./json/)
 - [Python](./python/)
 - [React](./react/)
 - [Rust](./rust/)
-- [Rust](./typescript/)
+- [Typescript](./typescript/)
