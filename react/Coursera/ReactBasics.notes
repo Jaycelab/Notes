@@ -1,0 +1,6 @@
+- Just like you can use expressions inside function components, you can also use them as prop values inside JSX elements, when rendering those function components.
+- Importing an image is possible in React by first importing the image file and then creating a component that uses the image as a prop. We do this by passing the image as a prop to the component by creating a variable with the src as the image file and returning the variable.
+We can then use the component in the App page or main app page. 
+- In React, you need to import a component multiple times – as many times as you plan to render it from its parent’s return statement. False 
+You should import the component only once, and then you’re allowed to render it as many times as needed
+-  You can render as many of the same component, or as many different components as you like, from the parent component.
