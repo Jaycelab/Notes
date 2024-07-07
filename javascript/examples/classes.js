@@ -140,15 +140,15 @@ console.log(boxingGym.treadmill) //
 
 const tinyArray = ['a', 'b', 'c']; console.log(tinyArray);
 
- let fruit = prompt("which fruit to buy", "apple?");
+ let fruits = prompt("which fruit to buy", "apple?");
 
-let bag = {
+let bags = {
   [fruit]: 5 //name of property is taken from variable above
 };
 
 alert(bag.apple);
 
-let fruit = prompt("Which fruit to buy?", "apple");
+let fruits2 = prompt("Which fruit to buy?", "apple");
 let bag = {};
 
 // take property name from the fruit variable
