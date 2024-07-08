@@ -1,4 +1,3 @@
-# Notes
 
 Collection my personal notes that I have taken throughout the years
 
