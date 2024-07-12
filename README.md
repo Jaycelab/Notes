@@ -1,5 +1,5 @@
 
-Collection my personal notes that I have taken throughout the years
+Collection of my personal notes that I have taken throughout the years
 
 ## Table of Contents
 
